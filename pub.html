@@ -45,6 +45,12 @@ h3 {
   text-align:left
 }
   
+.topnav {
+  position: relative;
+  overflow: hidden;
+  background-color: #333;
+}
+  
 .topnav_a {
   float: center;
   color: #f2f2f2;
@@ -59,13 +65,13 @@ h3 {
  <body font-family: 'Roboto', sans-serif;  color: #fff; style="margin-top: 5px; margin-left: 50px; margin-right: 50px;">
 
  <hr>
-
+<div class="topnav">
  <div class="topnav_a"> <p style="text-align:center; font-size:100%;font-family:Century Gothic">
-<a  href="#bio">Home</a>
+<a  href="#bio" class="active">Home</a>
 <a> |  </a>
-<a  href="#cv">CV </a>
+<a  href="#cv" class="active">CV </a>
 <a> |  </a>
-<a  href="#pub">Publications</a>
+<a  href="#pub" class="active">Publications</a>
 <a> |  </a>
 <a  href="#tuto">Tutorials</a>
 <a> |  </a>
@@ -84,7 +90,7 @@ h3 {
 <a  href="#acad">Academic Platforms</a>
 <a> |  </a>
 <a  href="#soc">Social Media</a>
-  </p></div>
+   </p></div></div>
   
 
 <hr>   
