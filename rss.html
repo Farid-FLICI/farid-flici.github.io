@@ -54,19 +54,39 @@ h3 {
   background-color: #05294a;
   height:50px;
 }
+  
+  .topnav_1 {
+  width: 100%;
+  position: fixed;
+  top: 51px;
+  left: 0;
+  background-color: #308788;
+  overflow-x: hidden;
+}  
 
   .a {color: #ffffff; text-decoration: none;   }
   .b {color: #12ff1a; text-decoration: none;   }
+
 .topnav_a {
   float: center;
   color: #ffffff;
   text-align: center;
-  padding: 1px 1px;
+  padding: 1px;1px;
   text-decoration: none;
   font-size: 16px;
   display: block;
 }
   
+.topnav_b {
+  height: 25px;
+  float: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 0px;0px;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+}
   
 </style>
 </head>
@@ -90,9 +110,7 @@ h3 {
 <a> |  </a>
 <a  href="./data.html" class="a" >Demo Data</a>
 <a> |  </a>
-<a  href="./pps.html" class="a" > Pop Proj Simulator </a>
-<a> |  </a> 
-<a  href="./pps.html" class="b" > Retirement Simulator </a>
+<a  href="./pps.html" class="b" >Simulators </a>
 <a> |  </a> 
 <a  href="./yout.html" class="a">Youtube</a>
 <a> |  </a>
@@ -101,9 +119,20 @@ h3 {
 <a  href="./soc.html" class="a">Social Media</a>
    </p></div></div>
    </b> 
+   
+   <b>
+<div class="topnav_1">
+<div class="topnav_b"> 
+<p style="text-align:center; font-size:100%;font-family:Century Gothic; color:#ffffff; ">
+
+<a  href="./pps.html" class="a" > Population Projection Simulator </a>
+<a>|</a>
+<a  href="./rss.html" class="b" > Retirement Sustainability Simulator </a>
+   </p></div></div>
+   </b> 
 
 <hr>   
-  <div style="position: absolute; top: 50px; left: 0; right: 0; bottom: 0">
+  <div style="position: absolute; top: 110px; left: 0; right: 0; bottom: 0">
   <iframe height="100%" width="100%" frameborder="no" src="https://faridflici.shinyapps.io/Simulator_Retirement_dz/"> </iframe>  
   </div>
 <hr>
