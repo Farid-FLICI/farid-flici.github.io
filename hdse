@@ -1,0 +1,76 @@
+<html>
+
+<head>
+  
+<title>Farid FLICI</title>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168381272-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-168381272-2');
+</script>
+  
+<html>
+<head>
+<title> HDSE </title>
+<style>
+h1 {  text-align: center; color: blue;   font-family:Century Gothic}
+h2 {  text-align: center; color: #317873;font-family:Century Gothic}
+h3 {  text-align: right;}
+.topnav_a {  overflow: hidden;  position: fixed;  top: 0;  left:0;  width: 100%;  background-color: #05294a;  height:40px;}
+.a {color: #ffffff; text-decoration: none;   }
+.b {color: #12ff1a; text-decoration: none;   }
+.topnav_a {  float: center;  color: #ffffff;  text-align: center;  padding: 0.8px 0.8px;  text-decoration: none;  font-size: 16px;  display: block;}
+
+<link href="horizontal-menu.css" rel="stylesheet">
+ol,ul {	list-style: none;}
+
+#mainMenu {	    margin:120px;	width:100%;	 left:0;  right:0;  padding:0.5px 0.8px; font-family: sans-serif; position: fixed; top: 0px; overflow: hidden;}
+#mainMenu li {	display:block;	width:19%; 	margin-left:0px; float: left;	text-align:center; border:1px solid #000;}
+#mainMenu a {	display:block;	padding:1px;	text-decoration:none;	background-color:blue;	color:white;}
+#mainMenu a:hover {background-color:#009; color:#fff;}
+
+</style>
+</head>
+
+<body style="margin-top: 5px; margin-left: 50px; margin-right: 50px;">
+
+<div align="center" style="margin-top:0px; margin-left:0px; position: fixed; align: center; width: 100%">
+<a>
+<h1 top: 50px;>  HDSE Research Department </h1>
+<h2  >   Human Development & Social Economics  </h2>
+</a>
+</div>
+
+<div align="center" style="margin-bottom:0px; margin-left:0px; width: 100%">
+<nav>
+<ul id="mainMenu">	
+			<li><a href="home.html"> Topics </a></li>
+			<li><a href="services.html"> Teams </a></li>
+			<li><a href="products.html"> Researchers </a></li>
+			<li><a href="support.html"> Support Staff </a></li>
+			<li><a href="blog.html"> Media </a></li>
+			<li><a href="home.html"> Projects </a></li>
+			<li><a href="services.html"> Publications </a></li>
+			<li><a href="products.html"> Communications </a></li>
+			<li><a href="support.html"> Conferences </a></li>
+			<li><a href="blog.html"> More </a></li>
+
+</ul>
+	</nav>
+    </div>
+<hr>
+
+
+<div align="center" style="margin-top:150px; position:fixed">
+<p >Based at the University of New South Wales (UNSW) with nodes at the Australian National University (ANU), Curtin University, The University of Melbourne and The University of Sydney, the ARC Centre of Excellence in Population Ageing Research (CEPAR) is producing world-class research on population ageing. The Centre is a unique collaboration bringing together academia, government and industry to address one of the major social challenges of the twenty first century.
+
+Our innovative research is providing global solutions to the economic and social challenges of population ageing and building a new generation of researchers to global standard with an appreciation of the multidisciplinary nature of population ageing.</p>
+</div>
+
+</body>
+</html>
