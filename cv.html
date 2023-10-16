@@ -108,18 +108,15 @@ h3 {
 
 <p style="color:white">Curriculum Vitae </p>
 <h2 id="cv"> Curriculum Vitae </h2>
- 
+   <hr>
 <div align="right">
 <button><a align="right" href="https://github.com/Farid-FLICI/farid-flici.github.io/raw/y/Farid_FLICI_CV.pdf"><b>Download CV (.pdf)</b></a> </button>
 </div>
-
-		<div id="pspdfkit" style="height: 100vh;"></div>
-		<script src="assets/pspdfkit.js"></script>
-  	<script>
-			PSPDFKit.load({ container: '#pspdfkit',	document: 'https://github.com/Farid-FLICI/farid-flici.github.io/raw/y/Farid_FLICI_CV.pdf',	})
-				.then(function (instance) {	console.log('PSPDFKit loaded', instance);	})
-				.catch(function (error) {	console.error(error.message);	});
-		</script>
+  <hr>
+<div id="pspdfkit" style="height: 100vh;"></div>
+<script src="assets/pspdfkit.js"></script>
+<script> PSPDFKit.load({ container: '#pspdfkit',	document: 'https://github.com/Farid-FLICI/farid-flici.github.io/raw/y/Farid_FLICI_CV.pdf',	})
+	</script>
    
    <hr>
   </body>
