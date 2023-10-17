@@ -110,9 +110,12 @@ h3 {
 </div>
  
    <hr>
-  <div id="bb"> </div>
-  <iframe height="600px" width="100%" 
-  src="https://github.com/Farid-FLICI/farid-flici.github.io/raw/y/Farid_FLICI_CV.pdf" > </iframe>
+<div id=”viewDoc” class=”blockOnView” >
+   <div id=”viewDocContent”></div>
+</div> 
+   document.getElementById("viewDocContent").innerHTML = 
+   "<iframe name=’viewer’ src =’https://github.com/Farid-FLICI/farid-flici.github.io/raw/y/Farid_FLICI_CV.pdf’ 
+      width=’600px’ height=’100% ’allowfullscreen webkitallowfullscreen ></iframe>"
 
   <hr>
   </body>
