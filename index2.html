@@ -5,23 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Farid Flici – Demographer & Actuary</title>
 
-  <!-- Fonts: modern corporate (Roboto + Roboto Slab) -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome for icons (free CDN) -->
+  <!-- Font Awesome icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root {
-      --primary: #003087;        /* Deep corporate blue */
-      --primary-dark: #001f5b;
-      --text: #1e293b;
+      --primary: #1e40af;       /* Deep professional blue */
+      --primary-light: #3b82f6;
+      --text: #0f172a;
       --text-light: #475569;
       --bg: #f8fafc;
       --card: #ffffff;
       --border: #e2e8f0;
-      --shadow: 0 4px 20px rgba(0,0,0,0.08);
-      --gray: #64748b;
+      --shadow: 0 6px 20px rgba(0,0,0,0.08);
     }
 
     * {
@@ -31,30 +32,49 @@
     }
 
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Inter', system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 0 2rem;
+      padding: 0 1.5rem;
     }
 
     header {
       background: var(--primary);
       color: white;
-      padding: 5rem 0 4rem;
+      padding: 6rem 0 4rem;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    header h1 {
-      font-family: 'Roboto Slab', serif;
-      font-size: 3.5rem;
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(30,64,175,0.95) 0%, rgba(59,130,246,0.85) 100%);
+      z-index: 1;
+    }
+
+    header > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.8rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
+      letter-spacing: -1px;
     }
 
     .subtitle {
@@ -64,24 +84,24 @@
       margin-bottom: 2rem;
     }
 
-    .nav {
+    nav {
       display: flex;
       justify-content: center;
       gap: 2.5rem;
-      margin-top: 1.5rem;
+      margin-top: 1.8rem;
     }
 
-    .nav a {
+    nav a {
       color: white;
       text-decoration: none;
       font-weight: 500;
       font-size: 1.1rem;
-      transition: all 0.25s;
-      padding: 0.4rem 0.8rem;
-      border-radius: 6px;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
     }
 
-    .nav a:hover {
+    nav a:hover {
       background: rgba(255,255,255,0.15);
       transform: translateY(-2px);
     }
@@ -92,26 +112,26 @@
       z-index: 2;
     }
 
-    .card {
+    section {
       background: var(--card);
-      border-radius: 12px;
+      border-radius: 16px;
       padding: 2.5rem;
-      margin: 2rem 0;
+      margin: 2.5rem 0;
       box-shadow: var(--shadow);
       border: 1px solid var(--border);
-      transition: transform 0.25s, box-shadow 0.25s;
+      transition: all 0.3s ease;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
+    section:hover {
+      transform: translateY(-8px);
       box-shadow: 0 20px 30px rgba(0,0,0,0.12);
     }
 
     h2 {
-      font-family: 'Roboto Slab', serif;
-      font-size: 2.1rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
       color: var(--primary);
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.5rem;
       position: relative;
       display: inline-block;
     }
@@ -120,7 +140,7 @@
       content: '';
       position: absolute;
       width: 70px;
-      height: 3px;
+      height: 4px;
       bottom: -10px;
       left: 0;
       background: var(--primary);
@@ -133,7 +153,7 @@
     }
 
     ul li {
-      margin: 1.1rem 0;
+      margin: 1rem 0;
       padding-left: 1.8rem;
       position: relative;
       color: var(--text-light);
@@ -146,31 +166,32 @@
       color: var(--primary);
       position: absolute;
       left: 0;
+      font-size: 1.1rem;
     }
 
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.5rem;
-      margin-top: 1.5rem;
+      margin-top: 1.8rem;
     }
 
     .contact-item {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 1.2rem;
       font-size: 1.05rem;
     }
 
     .contact-item i {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color: var(--primary);
     }
 
     .contact-item a {
       color: var(--primary);
       text-decoration: none;
-      transition: color 0.2s;
+      transition: all 0.2s;
     }
 
     .contact-item a:hover {
@@ -182,8 +203,8 @@
       background: var(--primary);
       color: white;
       text-align: center;
-      padding: 2.5rem 0;
-      margin-top: 4rem;
+      padding: 3rem 0;
+      margin-top: 5rem;
     }
 
     footer p {
@@ -193,9 +214,9 @@
 
     @media (max-width: 768px) {
       header { padding: 4rem 0 3rem; }
-      h1 { font-size: 2.6rem; }
+      h1 { font-size: 2.8rem; }
       .nav { flex-direction: column; gap: 1.2rem; }
-      .card { padding: 1.8rem; }
+      section { padding: 2rem 1.5rem; }
     }
   </style>
 </head>
@@ -205,7 +226,7 @@
     <div class="container">
       <h1>Farid Flici</h1>
       <p class="subtitle">Senior Research Fellow | Demographer | Actuary</p>
-      <nav class="nav">
+      <nav>
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
@@ -216,33 +237,33 @@
   </header>
 
   <main class="container">
-    <section id="about" class="card">
+    <section id="about">
       <h2>About</h2>
-      <p>Senior Research Fellow at the Research Center in Applied Economics for Development (CREAD), Algiers. Visiting Researcher at the London School of Hygiene & Tropical Medicine (LSHTM). PhD in Statistics (ENSSEA, 2017). Specialized in mortality modeling, migrant health inequalities, population aging, and pension system sustainability. Research bridges actuarial science, demography, and public policy to address demographic challenges in Algeria and Europe.</p>
+      <p>Senior Research Fellow at the Research Center in Applied Economics for Development (CREAD), Algiers. Visiting Researcher at the London School of Hygiene & Tropical Medicine (LSHTM). PhD in Statistics (ENSSEA, 2017). Specialized in mortality modeling, migrant health inequalities, population aging, and pension sustainability. Research bridges actuarial science, demography, and public policy to address demographic challenges in Algeria and Europe.</p>
     </section>
 
-    <section id="research" class="card">
+    <section id="research">
       <h2>Research Interests</h2>
       <ul>
         <li>Migrant mortality and health inequalities in high-income countries</li>
         <li>Population aging and retirement system sustainability</li>
-        <li>Expert-based demographic projections and forecasting</li>
+        <li>Expert-based demographic projections and forecasting tools</li>
         <li>Chronic disease impact on healthy life expectancy</li>
         <li>Applied statistical modeling (R, Shiny, mortality interpolation)</li>
       </ul>
     </section>
 
-    <section id="publications" class="card">
+    <section id="publications">
       <h2>Selected Publications</h2>
       <ul>
         <li>Flici, F., Trias-Llimós, S., Permanyer, I. (2025). How Does Origin Affect Migrant Mortality Advantage in Spain? <em>Genus</em>. doi:10.1186/s41118-025-00233-5</li>
         <li>Flici, F. (2025). Q2q: an R package for Interpolating Mortality Rates at all Ages. <em>Journal of Open Source Research</em>, 13(1). doi:10.5334/jors.484</li>
         <li>Flici, F., Chinoune, M. (2024). Algerian elders are living longer lives, but shorter lives free of chronic diseases. <em>Population Medicine</em>, 6(31). doi:10.18332/popmed/196709</li>
-        <!-- Add more -->
+        <!-- Add more as needed -->
       </ul>
     </section>
 
-    <section id="tools" class="card">
+    <section id="tools">
       <h2>Tools & Software</h2>
       <ul>
         <li><strong>Q2q R package</strong> – Mortality rate interpolation (CRAN)</li>
@@ -251,7 +272,7 @@
       </ul>
     </section>
 
-    <section id="contact" class="card">
+    <section id="contact">
       <h2>Contact</h2>
       <div class="contact-grid">
         <div class="contact-item">
