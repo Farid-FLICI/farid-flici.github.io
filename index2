@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farid Flici – Demographer & Actuary</title>
+  
+  <!-- Google Fonts (optional – remove if you want pure system fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --text-light: #4a4a4a;
+      --accent: #0066cc;
+      --accent-hover: #0052a3;
+      --border: #e0e0e0;
+      --card-bg: #f9f9f9;
+      --shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #e0e0e0;
+      --text-light: #a0a0a0;
+      --accent: #4da6ff;
+      --accent-hover: #3399ff;
+      --border: #333;
+      --card-bg: #1e1e1e;
+      --shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      font-size: 1.3rem;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+    nav {
+      margin: 1.5rem 0;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: var(--accent-hover);
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+    section {
+      margin: 3rem 0;
+      padding: 2rem;
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      color: var(--accent);
+    }
+    ul {
+      list-style: none;
+    }
+    ul li {
+      margin: 0.8rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    ul li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .publications li {
+      margin-bottom: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: var(--text-light);
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2rem; }
+      nav a { margin: 0 0.8rem; font-size: 0.95rem; }
+      section { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+  <header>
+    <div class="container">
+      <h1>Farid Flici</h1>
+      <p class="subtitle">Senior Research Fellow | Demographer | Actuary</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#tools">Tools</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>About</h2>
+      <p>Senior Research Fellow at CREAD (Algeria) with expertise in demography, actuarial science, and social security. PhD in Statistics (ENSSEA, 2017). Current visiting researcher at LSHTM (UK). Research interests include migrant health disparities, population aging, pension sustainability, and statistical modeling.</p>
+    </section>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+      <ul>
+        <li>Migrant mortality and health inequalities in high-income countries</li>
+        <li>Population aging and retirement system sustainability</li>
+        <li>Expert-based demographic projections and population forecasting</li>
+        <li>Chronic disease impact on healthy life expectancy</li>
+        <li>Applied statistical modeling (R, Shiny, mortality interpolation)</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Selected Publications</h2>
+      <ul class="publications">
+        <li>Flici, F., Trias-Llimós, S., Permanyer, I. (2025). How Does Origin Affect Migrant Mortality Advantage in Spain? <em>Genus</em>. doi:10.1186/s41118-025-00233-5</li>
+        <li>Flici, F. (2025). Q2q: an R package for Interpolating Mortality Rates at all Ages. <em>Journal of Open Source Research</em>, 13(1), 7. doi:10.5334/jors.484</li>
+        <!-- Add more as needed -->
+      </ul>
+    </section>
+
+    <section id="tools">
+      <h2>Tools & Software</h2>
+      <ul>
+        <li><strong>Q2q R package</strong> – Interpolating mortality rates at all ages (<a href="https://cran.r-project.org/web/packages/Q2q/index.html">CRAN</a>)</li>
+        <li><strong>Retirement Sustainability Simulator</strong> – Web app for Algerian pension projections (<a href="https://farid-flici.github.io/rss.html">link</a>)</li>
+        <li><strong>Expert Survey Tool for Population Projections (EPPDZ)</strong> – Shiny app (<a href="https://faridflici.shinyapps.io/eppdz/">link</a>)</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: farid.flici@cread.dz</p>
+      <p>GitHub: <a href="https://github.com/farid-flici">github.com/farid-flici</a></p>
+      <p>ORCID: <a href="https://orcid.org/0000-0002-XXXX-XXXX">0000-0002-XXXX-XXXX</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Farid Flici. Last updated: March 2026</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+  </script>
+
+</body>
+</html>
