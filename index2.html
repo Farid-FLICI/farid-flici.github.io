@@ -4,133 +4,226 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Farid Flici – Demographer & Actuary</title>
-  
-  <!-- Google Fonts (optional – remove if you want pure system fonts) -->
+
+  <!-- Modern fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #ffffff;
-      --text: #1a1a1a;
-      --text-light: #4a4a4a;
-      --accent: #0066cc;
-      --accent-hover: #0052a3;
-      --border: #e0e0e0;
-      --card-bg: #f9f9f9;
-      --shadow: 0 4px 12px rgba(0,0,0,0.08);
+      --bg: #fafafa;
+      --text: #111827;
+      --text-light: #4b5563;
+      --accent: #2563eb;
+      --accent-light: #3b82f6;
+      --accent-dark: #1d4ed8;
+      --card: #ffffff;
+      --border: #e5e7eb;
+      --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+      --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
     }
+
     [data-theme="dark"] {
-      --bg: #121212;
-      --text: #e0e0e0;
-      --text-light: #a0a0a0;
-      --accent: #4da6ff;
-      --accent-hover: #3399ff;
-      --border: #333;
-      --card-bg: #1e1e1e;
-      --shadow: 0 4px 16px rgba(0,0,0,0.4);
+      --bg: #111827;
+      --text: #f3f4f6;
+      --text-light: #9ca3af;
+      --accent: #60a5fa;
+      --accent-light: #93c5fd;
+      --accent-dark: #3b82f6;
+      --card: #1f2937;
+      --border: #374151;
     }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-family: 'Inter', system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
-      transition: background 0.3s, color 0.3s;
+      line-height: 1.7;
+      transition: background 0.4s, color 0.4s;
     }
+
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 2rem 1.5rem;
+      padding: 0 1.5rem;
     }
+
     header {
+      padding: 6rem 0 4rem;
       text-align: center;
-      padding: 4rem 0 2rem;
-      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: white;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
-    h1 {
-      font-size: 2.8rem;
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.8rem;
       margin-bottom: 0.5rem;
+      letter-spacing: -1px;
     }
+
     .subtitle {
-      font-size: 1.3rem;
-      color: var(--text-light);
+      font-size: 1.4rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      position: relative;
+    }
+
+    .nav a:hover {
+      color: #dbeafe;
+      transform: translateY(-2px);
+    }
+
+    .nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -6px;
+      left: 0;
+      background: white;
+      transition: width 0.3s ease;
+    }
+
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      margin-top: -6rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin: 2.5rem 0;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--accent);
       margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
     }
-    nav {
-      margin: 1.5rem 0;
+
+    h2::after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      bottom: -8px;
+      left: 0;
+      background: var(--accent);
+      border-radius: 2px;
     }
-    nav a {
-      margin: 0 1rem;
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      margin: 1rem 0;
+      padding-left: 1.8rem;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "→";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact a {
       color: var(--accent);
       text-decoration: none;
       font-weight: 500;
       transition: color 0.2s;
     }
-    nav a:hover {
-      color: var(--accent-hover);
+
+    .contact a:hover {
+      color: var(--accent-light);
+      text-decoration: underline;
     }
+
     .theme-toggle {
       position: fixed;
       top: 1.5rem;
       right: 1.5rem;
-      background: none;
+      background: rgba(255,255,255,0.9);
       border: none;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       cursor: pointer;
+      padding: 0.6rem;
+      border-radius: 50%;
+      box-shadow: var(--shadow-sm);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      transition: all 0.3s;
     }
-    section {
-      margin: 3rem 0;
-      padding: 2rem;
-      background: var(--card-bg);
-      border-radius: 12px;
-      box-shadow: var(--shadow);
+
+    [data-theme="dark"] .theme-toggle {
+      background: rgba(30,30,30,0.9);
+      color: white;
     }
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1.2rem;
-      color: var(--accent);
-    }
-    ul {
-      list-style: none;
-    }
-    ul li {
-      margin: 0.8rem 0;
-      padding-left: 1.5rem;
-      position: relative;
-    }
-    ul li::before {
-      content: "•";
-      color: var(--accent);
-      position: absolute;
-      left: 0;
-    }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .publications li {
-      margin-bottom: 1rem;
-    }
+
     footer {
       text-align: center;
-      padding: 2rem 0;
+      padding: 3rem 0;
       color: var(--text-light);
       border-top: 1px solid var(--border);
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
+
     @media (max-width: 768px) {
-      h1 { font-size: 2.2rem; }
-      nav a { margin: 0 0.8rem; font-size: 0.95rem; }
-      section { padding: 1.5rem; }
+      header { padding: 4rem 0 3rem; }
+      h1 { font-size: 2.8rem; }
+      .nav { flex-direction: column; gap: 1rem; }
+      section { padding: 1.8rem; }
     }
   </style>
 </head>
@@ -141,8 +234,8 @@
   <header>
     <div class="container">
       <h1>Farid Flici</h1>
-      <p class="subtitle">Senior Research Fellow | Demographer | Actuary</p>
-      <nav>
+      <p class="subtitle">Demographer · Actuary · Senior Research Fellow</p>
+      <nav class="nav">
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
@@ -154,26 +247,27 @@
 
   <main class="container">
     <section id="about">
-      <h2>About</h2>
-      <p>Senior Research Fellow at CREAD (Algeria) with expertise in demography, actuarial science, and social security. PhD in Statistics (ENSSEA, 2017). Current visiting researcher at LSHTM (UK). Research interests include migrant health disparities, population aging, pension sustainability, and statistical modeling.</p>
+      <h2>About Me</h2>
+      <p>Senior Research Fellow at CREAD (Algeria), Visiting Researcher at LSHTM (UK). PhD in Statistics and Demography (ENSSEA, 2017). I specialize in mortality modeling, migrant health inequalities, population aging, and pension sustainability. My work bridges actuarial science and public policy to address demographic challenges in Algeria and Europe.</p>
     </section>
 
     <section id="research">
       <h2>Research Interests</h2>
       <ul>
-        <li>Migrant mortality and health inequalities in high-income countries</li>
+        <li>Migrant mortality and health disparities in high-income countries</li>
         <li>Population aging and retirement system sustainability</li>
-        <li>Expert-based demographic projections and population forecasting</li>
-        <li>Chronic disease impact on healthy life expectancy</li>
+        <li>Expert-based demographic projections and forecasting tools</li>
+        <li>Chronic diseases and healthy life expectancy</li>
         <li>Applied statistical modeling (R, Shiny, mortality interpolation)</li>
       </ul>
     </section>
 
     <section id="publications">
       <h2>Selected Publications</h2>
-      <ul class="publications">
+      <ul>
         <li>Flici, F., Trias-Llimós, S., Permanyer, I. (2025). How Does Origin Affect Migrant Mortality Advantage in Spain? <em>Genus</em>. doi:10.1186/s41118-025-00233-5</li>
-        <li>Flici, F. (2025). Q2q: an R package for Interpolating Mortality Rates at all Ages. <em>Journal of Open Source Research</em>, 13(1), 7. doi:10.5334/jors.484</li>
+        <li>Flici, F. (2025). Q2q: an R package for Interpolating Mortality Rates at all Ages. <em>Journal of Open Source Research</em>, 13(1). doi:10.5334/jors.484</li>
+        <li>Flici, F., Chinoune, M. (2024). Algerian elders are living longer lives, but shorter lives free of chronic diseases. <em>Population Medicine</em>, 6(31). doi:10.18332/popmed/196709</li>
         <!-- Add more as needed -->
       </ul>
     </section>
@@ -181,22 +275,24 @@
     <section id="tools">
       <h2>Tools & Software</h2>
       <ul>
-        <li><strong>Q2q R package</strong> – Interpolating mortality rates at all ages (<a href="https://cran.r-project.org/web/packages/Q2q/index.html">CRAN</a>)</li>
-        <li><strong>Retirement Sustainability Simulator</strong> – Web app for Algerian pension projections (<a href="https://farid-flici.github.io/rss.html">link</a>)</li>
-        <li><strong>Expert Survey Tool for Population Projections (EPPDZ)</strong> – Shiny app (<a href="https://faridflici.shinyapps.io/eppdz/">link</a>)</li>
+        <li><strong>Q2q R package</strong> – Mortality rate interpolation (CRAN)</li>
+        <li><strong>Retirement Sustainability Simulator</strong> – Algerian pension projections</li>
+        <li><strong>Expert Survey Tool (EPPDZ)</strong> – Shiny app for demographic projections</li>
       </ul>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: farid.flici@cread.dz</p>
-      <p>GitHub: <a href="https://github.com/farid-flici">github.com/farid-flici</a></p>
-      <p>ORCID: <a href="https://orcid.org/0000-0002-XXXX-XXXX">0000-0002-XXXX-XXXX</a></p>
+      <h2>Get in Touch</h2>
+      <div class="contact">
+        <p>Email: <a href="mailto:farid.flici@cread.dz">farid.flici@cread.dz</a></p>
+        <p>GitHub: <a href="https://github.com/farid-flici">github.com/farid-flici</a></p>
+        <p>ORCID: <a href="https://orcid.org/0000-0002-XXXX-XXXX">0000-0002-XXXX-XXXX</a></p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 Farid Flici. Last updated: March 2026</p>
+    <p>© 2026 Farid Flici. Built with care in Algiers & London.</p>
   </footer>
 
   <script>
