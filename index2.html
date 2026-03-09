@@ -1,38 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Farid Flici – Demographer & Actuary</title>
 
-  <!-- Modern fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Fonts: modern corporate (Roboto + Roboto Slab) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons (free CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root {
-      --bg: #fafafa;
-      --text: #111827;
-      --text-light: #4b5563;
-      --accent: #2563eb;
-      --accent-light: #3b82f6;
-      --accent-dark: #1d4ed8;
+      --primary: #003087;        /* Deep corporate blue */
+      --primary-dark: #001f5b;
+      --text: #1e293b;
+      --text-light: #475569;
+      --bg: #f8fafc;
       --card: #ffffff;
-      --border: #e5e7eb;
-      --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-      --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-    }
-
-    [data-theme="dark"] {
-      --bg: #111827;
-      --text: #f3f4f6;
-      --text-light: #9ca3af;
-      --accent: #60a5fa;
-      --accent-light: #93c5fd;
-      --accent-dark: #3b82f6;
-      --card: #1f2937;
-      --border: #374151;
+      --border: #e2e8f0;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+      --gray: #64748b;
     }
 
     * {
@@ -42,37 +31,36 @@
     }
 
     body {
-      font-family: 'Inter', system-ui, sans-serif;
+      font-family: 'Roboto', sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
-      transition: background 0.4s, color 0.4s;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 2rem;
     }
 
     header {
-      padding: 6rem 0 4rem;
-      text-align: center;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      background: var(--primary);
       color: white;
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      padding: 5rem 0 4rem;
+      text-align: center;
     }
 
     header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.8rem;
+      font-family: 'Roboto Slab', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
       margin-bottom: 0.5rem;
-      letter-spacing: -1px;
     }
 
     .subtitle {
-      font-size: 1.4rem;
-      opacity: 0.9;
+      font-size: 1.35rem;
+      font-weight: 400;
+      opacity: 0.95;
       margin-bottom: 2rem;
     }
 
@@ -80,7 +68,7 @@
       display: flex;
       justify-content: center;
       gap: 2.5rem;
-      margin-top: 2rem;
+      margin-top: 1.5rem;
     }
 
     .nav a {
@@ -88,56 +76,42 @@
       text-decoration: none;
       font-weight: 500;
       font-size: 1.1rem;
-      transition: all 0.3s;
-      position: relative;
+      transition: all 0.25s;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
     }
 
     .nav a:hover {
-      color: #dbeafe;
+      background: rgba(255,255,255,0.15);
       transform: translateY(-2px);
     }
 
-    .nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -6px;
-      left: 0;
-      background: white;
-      transition: width 0.3s ease;
-    }
-
-    .nav a:hover::after {
-      width: 100%;
-    }
-
     main {
-      margin-top: -6rem;
+      margin-top: -5rem;
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
 
-    section {
+    .card {
       background: var(--card);
-      border-radius: 16px;
+      border-radius: 12px;
       padding: 2.5rem;
-      margin: 2.5rem 0;
-      box-shadow: var(--shadow-md);
+      margin: 2rem 0;
+      box-shadow: var(--shadow);
       border: 1px solid var(--border);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: transform 0.25s, box-shadow 0.25s;
     }
 
-    section:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.12);
     }
 
     h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
+      font-family: 'Roboto Slab', serif;
+      font-size: 2.1rem;
+      color: var(--primary);
+      margin-bottom: 1.4rem;
       position: relative;
       display: inline-block;
     }
@@ -145,96 +119,92 @@
     h2::after {
       content: '';
       position: absolute;
-      width: 60px;
+      width: 70px;
       height: 3px;
-      bottom: -8px;
+      bottom: -10px;
       left: 0;
-      background: var(--accent);
+      background: var(--primary);
       border-radius: 2px;
     }
 
     ul {
       list-style: none;
+      padding-left: 0;
     }
 
     ul li {
-      margin: 1rem 0;
+      margin: 1.1rem 0;
       padding-left: 1.8rem;
       position: relative;
+      color: var(--text-light);
     }
 
     ul li::before {
-      content: "→";
-      color: var(--accent);
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: var(--primary);
       position: absolute;
       left: 0;
-      font-weight: bold;
     }
 
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
       margin-top: 1.5rem;
     }
 
-    .contact a {
-      color: var(--accent);
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .contact-item i {
+      font-size: 1.4rem;
+      color: var(--primary);
+    }
+
+    .contact-item a {
+      color: var(--primary);
       text-decoration: none;
-      font-weight: 500;
       transition: color 0.2s;
     }
 
-    .contact a:hover {
-      color: var(--accent-light);
+    .contact-item a:hover {
+      color: var(--primary-dark);
       text-decoration: underline;
     }
 
-    .theme-toggle {
-      position: fixed;
-      top: 1.5rem;
-      right: 1.5rem;
-      background: rgba(255,255,255,0.9);
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      padding: 0.6rem;
-      border-radius: 50%;
-      box-shadow: var(--shadow-sm);
-      backdrop-filter: blur(8px);
-      z-index: 1000;
-      transition: all 0.3s;
-    }
-
-    [data-theme="dark"] .theme-toggle {
-      background: rgba(30,30,30,0.9);
-      color: white;
-    }
-
     footer {
+      background: var(--primary);
+      color: white;
       text-align: center;
-      padding: 3rem 0;
-      color: var(--text-light);
-      border-top: 1px solid var(--border);
+      padding: 2.5rem 0;
       margin-top: 4rem;
+    }
+
+    footer p {
+      font-size: 0.95rem;
+      opacity: 0.9;
     }
 
     @media (max-width: 768px) {
       header { padding: 4rem 0 3rem; }
-      h1 { font-size: 2.8rem; }
-      .nav { flex-direction: column; gap: 1rem; }
-      section { padding: 1.8rem; }
+      h1 { font-size: 2.6rem; }
+      .nav { flex-direction: column; gap: 1.2rem; }
+      .card { padding: 1.8rem; }
     }
   </style>
 </head>
 <body>
 
-  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-
   <header>
     <div class="container">
       <h1>Farid Flici</h1>
-      <p class="subtitle">Demographer · Actuary · Senior Research Fellow</p>
+      <p class="subtitle">Senior Research Fellow | Demographer | Actuary</p>
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#research">Research</a>
@@ -246,33 +216,33 @@
   </header>
 
   <main class="container">
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Senior Research Fellow at CREAD (Algeria), Visiting Researcher at LSHTM (UK). PhD in Statistics and Demography (ENSSEA, 2017). I specialize in mortality modeling, migrant health inequalities, population aging, and pension sustainability. My work bridges actuarial science and public policy to address demographic challenges in Algeria and Europe.</p>
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>Senior Research Fellow at the Research Center in Applied Economics for Development (CREAD), Algiers. Visiting Researcher at the London School of Hygiene & Tropical Medicine (LSHTM). PhD in Statistics (ENSSEA, 2017). Specialized in mortality modeling, migrant health inequalities, population aging, and pension system sustainability. Research bridges actuarial science, demography, and public policy to address demographic challenges in Algeria and Europe.</p>
     </section>
 
-    <section id="research">
+    <section id="research" class="card">
       <h2>Research Interests</h2>
       <ul>
-        <li>Migrant mortality and health disparities in high-income countries</li>
+        <li>Migrant mortality and health inequalities in high-income countries</li>
         <li>Population aging and retirement system sustainability</li>
-        <li>Expert-based demographic projections and forecasting tools</li>
-        <li>Chronic diseases and healthy life expectancy</li>
+        <li>Expert-based demographic projections and forecasting</li>
+        <li>Chronic disease impact on healthy life expectancy</li>
         <li>Applied statistical modeling (R, Shiny, mortality interpolation)</li>
       </ul>
     </section>
 
-    <section id="publications">
+    <section id="publications" class="card">
       <h2>Selected Publications</h2>
       <ul>
         <li>Flici, F., Trias-Llimós, S., Permanyer, I. (2025). How Does Origin Affect Migrant Mortality Advantage in Spain? <em>Genus</em>. doi:10.1186/s41118-025-00233-5</li>
         <li>Flici, F. (2025). Q2q: an R package for Interpolating Mortality Rates at all Ages. <em>Journal of Open Source Research</em>, 13(1). doi:10.5334/jors.484</li>
         <li>Flici, F., Chinoune, M. (2024). Algerian elders are living longer lives, but shorter lives free of chronic diseases. <em>Population Medicine</em>, 6(31). doi:10.18332/popmed/196709</li>
-        <!-- Add more as needed -->
+        <!-- Add more -->
       </ul>
     </section>
 
-    <section id="tools">
+    <section id="tools" class="card">
       <h2>Tools & Software</h2>
       <ul>
         <li><strong>Q2q R package</strong> – Mortality rate interpolation (CRAN)</li>
@@ -281,26 +251,28 @@
       </ul>
     </section>
 
-    <section id="contact">
-      <h2>Get in Touch</h2>
-      <div class="contact">
-        <p>Email: <a href="mailto:farid.flici@cread.dz">farid.flici@cread.dz</a></p>
-        <p>GitHub: <a href="https://github.com/farid-flici">github.com/farid-flici</a></p>
-        <p>ORCID: <a href="https://orcid.org/0000-0002-XXXX-XXXX">0000-0002-XXXX-XXXX</a></p>
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:farid.flici@cread.dz">farid.flici@cread.dz</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/farid-flici" target="_blank">github.com/farid-flici</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-id-card"></i>
+          <a href="https://orcid.org/0000-0002-XXXX-XXXX" target="_blank">ORCID: 0000-0002-XXXX-XXXX</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 Farid Flici. Built with care in Algiers & London.</p>
+    <p>© 2026 Farid Flici | Research Center in Applied Economics for Development (CREAD) & London School of Hygiene and Tropical Medicine</p>
   </footer>
-
-  <script>
-    function toggleTheme() {
-      const current = document.documentElement.getAttribute('data-theme');
-      document.documentElement.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
-    }
-  </script>
 
 </body>
 </html>
