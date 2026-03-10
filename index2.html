@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Farid Flici – Demographer & Actuary</title>
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome icons -->
+  <!-- Font Awesome (for icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root {
-      --primary: #1e40af;       /* Deep professional blue */
-      --primary-light: #3b82f6;
+      --primary: #1e40af;         /* Professional blue */
+      --primary-dark: #1e3a8a;
       --text: #0f172a;
       --text-light: #475569;
       --bg: #f8fafc;
@@ -50,17 +50,14 @@
       padding: 6rem 0 4rem;
       text-align: center;
       position: relative;
-      overflow: hidden;
     }
 
     header::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(30,64,175,0.95) 0%, rgba(59,130,246,0.85) 100%);
+      inset: 0;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      opacity: 0.95;
       z-index: 1;
     }
 
@@ -115,185 +112,4 @@
     section {
       background: var(--card);
       border-radius: 16px;
-      padding: 2.5rem;
-      margin: 2.5rem 0;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-      transition: all 0.3s ease;
-    }
-
-    section:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 30px rgba(0,0,0,0.12);
-    }
-
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      color: var(--primary);
-      margin-bottom: 1.5rem;
-      position: relative;
-      display: inline-block;
-    }
-
-    h2::after {
-      content: '';
-      position: absolute;
-      width: 70px;
-      height: 4px;
-      bottom: -10px;
-      left: 0;
-      background: var(--primary);
-      border-radius: 2px;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    ul li {
-      margin: 1rem 0;
-      padding-left: 1.8rem;
-      position: relative;
-      color: var(--text-light);
-    }
-
-    ul li::before {
-      content: "\f058";
-      font-family: "Font Awesome 6 Free";
-      font-weight: 900;
-      color: var(--primary);
-      position: absolute;
-      left: 0;
-      font-size: 1.1rem;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.8rem;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 1.2rem;
-      font-size: 1.05rem;
-    }
-
-    .contact-item i {
-      font-size: 1.6rem;
-      color: var(--primary);
-    }
-
-    .contact-item a {
-      color: var(--primary);
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-
-    .contact-item a:hover {
-      color: var(--primary-dark);
-      text-decoration: underline;
-    }
-
-    footer {
-      background: var(--primary);
-      color: white;
-      text-align: center;
-      padding: 3rem 0;
-      margin-top: 5rem;
-    }
-
-    footer p {
-      font-size: 0.95rem;
-      opacity: 0.9;
-    }
-
-    @media (max-width: 768px) {
-      header { padding: 4rem 0 3rem; }
-      h1 { font-size: 2.8rem; }
-      .nav { flex-direction: column; gap: 1.2rem; }
-      section { padding: 2rem 1.5rem; }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="container">
-      <h1>Farid Flici</h1>
-      <p class="subtitle">Senior Research Fellow | Demographer | Actuary</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#tools">Tools</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section id="about">
-      <h2>About</h2>
-      <p>Senior Research Fellow at the Research Center in Applied Economics for Development (CREAD), Algiers. Visiting Researcher at the London School of Hygiene & Tropical Medicine (LSHTM). PhD in Statistics (ENSSEA, 2017). Specialized in mortality modeling, migrant health inequalities, population aging, and pension sustainability. Research bridges actuarial science, demography, and public policy to address demographic challenges in Algeria and Europe.</p>
-    </section>
-
-    <section id="research">
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Migrant mortality and health inequalities in high-income countries</li>
-        <li>Population aging and retirement system sustainability</li>
-        <li>Expert-based demographic projections and forecasting tools</li>
-        <li>Chronic disease impact on healthy life expectancy</li>
-        <li>Applied statistical modeling (R, Shiny, mortality interpolation)</li>
-      </ul>
-    </section>
-
-    <section id="publications">
-      <h2>Selected Publications</h2>
-      <ul>
-        <li>Flici, F., Trias-Llimós, S., Permanyer, I. (2025). How Does Origin Affect Migrant Mortality Advantage in Spain? <em>Genus</em>. doi:10.1186/s41118-025-00233-5</li>
-        <li>Flici, F. (2025). Q2q: an R package for Interpolating Mortality Rates at all Ages. <em>Journal of Open Source Research</em>, 13(1). doi:10.5334/jors.484</li>
-        <li>Flici, F., Chinoune, M. (2024). Algerian elders are living longer lives, but shorter lives free of chronic diseases. <em>Population Medicine</em>, 6(31). doi:10.18332/popmed/196709</li>
-        <!-- Add more as needed -->
-      </ul>
-    </section>
-
-    <section id="tools">
-      <h2>Tools & Software</h2>
-      <ul>
-        <li><strong>Q2q R package</strong> – Mortality rate interpolation (CRAN)</li>
-        <li><strong>Retirement Sustainability Simulator</strong> – Algerian pension projections</li>
-        <li><strong>Expert Survey Tool (EPPDZ)</strong> – Shiny app for demographic projections</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:farid.flici@cread.dz">farid.flici@cread.dz</a>
-        </div>
-        <div class="contact-item">
-          <i class="fab fa-github"></i>
-          <a href="https://github.com/farid-flici" target="_blank">github.com/farid-flici</a>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-id-card"></i>
-          <a href="https://orcid.org/0000-0002-XXXX-XXXX" target="_blank">ORCID: 0000-0002-XXXX-XXXX</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 Farid Flici | Research Center in Applied Economics for Development (CREAD) & London School of Hygiene and Tropical Medicine</p>
-  </footer>
-
-</body>
-</html>
+      padding: 2.5rem
