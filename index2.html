@@ -10,143 +10,147 @@
 
 <style>
 :root {
-  --primary: #001f3f;
-  --green: #2ecc71;
-  --white: #ffffff;
-  --gray: #34495e;
-  --light: #f5f7fa;
-  --shadow: 0 6px 18px rgba(0,0,0,0.08);
+  --primary:#001f3f;
+  --green:#2ecc71;
+  --light:#f7f9fb;
+  --white:#ffffff;
+  --shadow:0 8px 25px rgba(0,0,0,0.08);
 }
 
-* { margin:0; padding:0; box-sizing:border-box; }
+*{margin:0;padding:0;box-sizing:border-box;}
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background: var(--light);
+body{
+  font-family:'Roboto',sans-serif;
+  background:var(--light);
   color:#222;
-  line-height:1.6;
 }
 
-.container {
+/* CONTAINER */
+.container{
   max-width:1100px;
   margin:auto;
   padding:0 1.5rem;
 }
 
-/* HEADER */
-header {
-  background: var(--primary);
+/* HERO */
+header{
+  background:var(--primary);
   color:white;
   padding:3rem 0;
-  text-align:center;
 }
 
-.profile {
+.hero{
   display:flex;
   flex-wrap:wrap;
-  justify-content:center;
   align-items:center;
+  justify-content:space-between;
   gap:2rem;
 }
 
-.profile img {
+.hero-text{
+  max-width:600px;
+}
+
+.hero-text h1{
+  font-size:2.5rem;
+}
+
+.subtitle{
+  margin:0.5rem 0;
+}
+
+.tagline{
+  margin:1rem 0;
+  opacity:0.9;
+}
+
+.quick-links a{
+  color:white;
+  margin-right:1rem;
+  text-decoration:none;
+}
+
+.quick-links a:hover{
+  color:var(--green);
+}
+
+.hero img{
   width:150px;
   height:150px;
   border-radius:50%;
   border:4px solid var(--green);
-  object-fit:cover;
-}
-
-.profile-info h1 {
-  font-size:2.5rem;
-}
-
-.subtitle {
-  font-size:1.2rem;
-  margin:0.5rem 0;
-}
-
-.tagline {
-  max-width:600px;
-  margin:0.8rem auto;
-  font-size:1rem;
-  opacity:0.9;
-}
-
-.quick-links a {
-  color:white;
-  margin:0 0.5rem;
-  font-size:0.95rem;
-  text-decoration:none;
-  border-bottom:1px solid transparent;
-}
-
-.quick-links a:hover {
-  border-color:var(--green);
 }
 
 /* NAV */
-nav {
+nav{
   position:sticky;
   top:0;
   background:var(--primary);
+  padding:0.8rem;
   display:flex;
   justify-content:center;
   gap:1.5rem;
-  padding:0.8rem;
   z-index:1000;
 }
 
-nav a {
+nav a{
   color:white;
   text-decoration:none;
-  font-weight:500;
 }
 
-nav a:hover {
+nav a:hover{
   color:var(--green);
 }
 
 /* SECTIONS */
-section {
-  background:white;
-  padding:2rem;
+section{
   margin:2rem 0;
-  border-radius:10px;
-  box-shadow:var(--shadow);
-  border-left:4px solid var(--green);
-  transition:0.3s;
 }
 
-section:hover {
-  transform:translateY(-3px);
-}
-
-h2 {
+h2{
   color:var(--primary);
   margin-bottom:1rem;
 }
 
-ul {
-  list-style:none;
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:1.5rem;
 }
 
-ul li {
-  margin:0.7rem 0;
+/* CARD */
+.card{
+  background:white;
+  padding:1.5rem;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+/* TWO COLUMN */
+.two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2rem;
+}
+
+@media(max-width:768px){
+  .hero{flex-direction:column;text-align:center;}
+  .two-col{grid-template-columns:1fr;}
 }
 
 /* FOOTER */
-footer {
+footer{
   background:var(--primary);
   color:white;
   text-align:center;
   padding:2rem;
   margin-top:3rem;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .profile { flex-direction:column; }
 }
 </style>
 </head>
@@ -154,35 +158,36 @@ footer {
 <body>
 
 <header>
-  <div class="container">
-    <div class="profile">
-      <img src="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/14e.jpg">
-      <div class="profile-info">
-        <h1>Farid Flici</h1>
-        <p class="subtitle">Actuarial Demography | Mortality & Health Inequalities | Pension Systems</p>
-        <p class="tagline">
-          Researching population ageing, migrant mortality, and social security sustainability using actuarial and demographic methods.
-        </p>
+<div class="container hero">
 
-        <div class="quick-links">
-          <a href="#">Google Scholar</a>
-          <a href="#">RePEc</a>
-          <a href="#">ResearchGate</a>
-          <a href="#">GitHub</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="hero-text">
+<h1>Farid Flici</h1>
+<p class="subtitle">Actuarial Demography | Mortality | Health Inequalities | Pensions</p>
+
+<p class="tagline">
+Researching population ageing, migrant mortality, and social security sustainability using actuarial and demographic methods.
+</p>
+
+<div class="quick-links">
+<a href="#">Google Scholar</a>
+<a href="#">RePEc</a>
+<a href="#">ResearchGate</a>
+<a href="#">GitHub</a>
+</div>
+</div>
+
+<img src="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/14e.jpg">
+
+</div>
 </header>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#featured">Featured</a>
-  <a href="#research">Research</a>
-  <a href="#projects">Projects</a>
-  <a href="#publications">Publications</a>
-  <a href="#tools">Tools</a>
-  <a href="#contact">Contact</a>
+<a href="#about">About</a>
+<a href="#featured">Featured</a>
+<a href="#research">Research</a>
+<a href="#projects">Projects</a>
+<a href="#publications">Publications</a>
+<a href="#tools">Tools</a>
 </nav>
 
 <main class="container">
@@ -190,67 +195,90 @@ footer {
 <section id="about">
 <h2>About</h2>
 <p>
-I am a Senior Research Fellow at CREAD (Algiers) and Visiting Researcher at LSHTM (London), specializing in actuarial demography. My research focuses on mortality modelling, migrant health inequalities in high-income countries, and the sustainability of pension and social protection systems.
-</p>
-<p>
-I combine demographic methods, actuarial science, and statistical programming (R, Shiny) to develop both academic research and policy-relevant tools. My work contributes to international debates on population ageing, health expectancy, and social security reform, with applications in Algeria and comparative European contexts.
+Senior Research Fellow at CREAD (Algiers) and Visiting Researcher at LSHTM (London). 
+My work focuses on mortality modelling, migrant health inequalities in high-income countries, and pension system sustainability.
 </p>
 </section>
 
 <section id="featured">
 <h2>Featured Work</h2>
-<ul>
-<li><strong>Migrant Mortality in Spain</strong> – Genus (2025)</li>
-<li><strong>Q2q R Package</strong> – Mortality interpolation across all ages</li>
-<li><strong>Retirement Sustainability Simulator</strong> – Policy simulation tool</li>
-</ul>
+<div class="grid">
+
+<div class="card">
+<h3>📄 Migrant Mortality in Spain</h3>
+<p>Genus (2025). Analysis of origin-based mortality patterns.</p>
+</div>
+
+<div class="card">
+<h3>⚙️ Q2q R Package</h3>
+<p>Interpolation of mortality rates across all ages.</p>
+</div>
+
+<div class="card">
+<h3>📊 Retirement Simulator</h3>
+<p>Policy tool for pension sustainability analysis.</p>
+</div>
+
+</div>
 </section>
 
-<section id="research">
+<section class="two-col">
+
+<div>
 <h2>Research Interests</h2>
+<div class="card">
 <ul>
 <li>Migrant mortality and health inequalities</li>
-<li>Population ageing and pension sustainability</li>
-<li>Health expectancy and chronic disease impact</li>
-<li>Demographic forecasting and modelling</li>
-<li>Statistical programming (R, Shiny)</li>
+<li>Population ageing and pensions</li>
+<li>Health expectancy</li>
+<li>Demographic modelling</li>
 </ul>
-</section>
+</div>
+</div>
 
-<section id="projects">
+<div>
 <h2>Research Projects</h2>
+<div class="card">
 <ul>
-<li>PI – AI for Social Security Management in Algeria (2025–2027)</li>
-<li>PI – Migrant Mortality & Health Inequalities (LSHTM)</li>
-<li>PI – Longevity, Health and Ageing in Algeria (CREAD)</li>
+<li>PI – AI for Social Security (2025–2027)</li>
+<li>PI – Migrant Health Inequalities (LSHTM)</li>
+<li>PI – Longevity & Ageing (CREAD)</li>
 </ul>
+</div>
+</div>
+
 </section>
 
 <section id="publications">
 <h2>Selected Publications</h2>
-<ul>
-<li>Flici et al. (2025) – Migrant Mortality Advantage in Spain (Genus)</li>
-<li>Flici (2025) – Q2q R package (JORS)</li>
-<li>Flici & Chinoune (2024) – Healthy life expectancy in Algeria</li>
-<li>Flici (2023) – Pension system sustainability (ISSR)</li>
-</ul>
+<div class="card">
+<p><strong>2025</strong> – Migrant Mortality (Genus)</p>
+<p><strong>2025</strong> – Q2q R Package (JORS)</p>
+<p><strong>2024</strong> – Healthy Life Expectancy</p>
+<p><strong>2023</strong> – Pension Sustainability</p>
+</div>
 </section>
 
 <section id="tools">
 <h2>Research Tools & Software</h2>
-<ul>
-<li><strong>Q2q R package</strong><br>Interpolation of mortality rates across all ages</li>
-<li><strong>Retirement Sustainability Simulator</strong><br>Simulation tool for pension systems</li>
-<li><strong>Population Projection Simulator</strong><br>Custom demographic projections</li>
-<li><strong>Expert Survey Tool</strong><br>Shiny-based demographic forecasting tool</li>
-</ul>
-</section>
+<div class="grid">
 
-<section id="contact">
-<h2>Contact</h2>
-<p><i class="fas fa-envelope"></i> farid.flici@cread.dz</p>
-<p><i class="fab fa-github"></i> github.com/farid-flici</p>
-<p><i class="fas fa-id-card"></i> ORCID: 0000-0002-XXXX-XXXX</p>
+<div class="card">
+<h3>Q2q</h3>
+<p>Mortality interpolation across all ages.</p>
+</div>
+
+<div class="card">
+<h3>Retirement Simulator</h3>
+<p>Simulation of pension system sustainability.</p>
+</div>
+
+<div class="card">
+<h3>Population Projection Tool</h3>
+<p>Custom demographic projections.</p>
+</div>
+
+</div>
 </section>
 
 </main>
