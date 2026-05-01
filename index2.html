@@ -187,6 +187,81 @@ footer{
   padding:2rem;
   margin-top:3rem;
 }
+
+  /* RESEARCH LAYOUT */
+.research-block{
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  gap:2rem;
+  align-items:center;
+  margin-bottom:2.5rem;
+}
+
+.research-block.reverse{
+  grid-template-columns: 1fr 2fr;
+}
+
+.research-text p{
+  margin-bottom:1rem;
+}
+
+.research-plot img{
+  width:100%;
+  border-radius:10px;
+  box-shadow:var(--shadow);
+}
+
+/* SECTION BACKGROUND ALT */
+.alt-bg{
+  background:var(--white);
+  padding:2rem;
+  border-radius:12px;
+}
+
+/* BUTTONS */
+.btn{
+  display:inline-block;
+  margin-top:1rem;
+  margin-right:0.8rem;
+  padding:0.5rem 1rem;
+  background:var(--primary);
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  font-size:0.9rem;
+}
+
+.btn:hover{
+  background:var(--green);
+  color:black;
+}
+
+/* ROLE CARDS */
+.roles{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1.5rem;
+}
+
+.role-card{
+  background:white;
+  padding:1.5rem;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  text-align:center;
+}
+
+.role-card h3{
+  margin-bottom:0.5rem;
+  color:var(--primary);
+}
+
+@media(max-width:768px){
+  .research-block,
+  .research-block.reverse{
+    grid-template-columns:1fr;
+  }
+}
 </style>
 </head>
 
@@ -243,24 +318,133 @@ footer{
 
 <main class="container">
 
-<section id="about">
-<h2>About</h2>
-<p>
-I am a Senior Research Fellow at CREAD (Algiers) and Visiting Researcher at the London School of Hygiene & Tropical Medicine (LSHTM), specializing in actuarial demography. 
-I hold a PhD in Statistics (ENSSEA) with a background in actuarial science, and I have a strong interest in data science and its applications to population studies.
+<section>
+  <h2>Research</h2>
+  <p>
+    I am an actuarial demographer working at the intersection of mortality modelling, health inequalities, and pension sustainability. 
+    My research combines statistical modelling and policy-oriented analysis to study population ageing, migrant health, and social protection systems across Algeria, Europe, and the UK.
+  </p>
 
-I am a nationally accredited actuary, with extensive experience applying actuarial and demographic methods to real-world policy challenges. 
-My work lies at the intersection of mortality modelling, health inequalities, population ageing, and the financial sustainability of pension and social protection systems.
+  <a href="#" class="btn">CV</a>
+  <a href="#publications" class="btn">Publications</a>
+  <a href="#projects" class="btn">Projects</a>
+  <a href="#tools" class="btn">Software</a>
+</section>
 
-I collaborate widely with governmental institutions in Algeria, including the Ministries of Health, Finance, Labour and Social Security, National Solidarity, and the National Statistical Authority.
-I have also worked with international organisations and UN agencies both in Algeria and abroad, contributing to projects related to population dynamics, health, and social protection.
+ <section class="alt-bg">
+  <div class="research-block">
+    
+    <div class="research-text">
+      <h2>Migrant Mortality & Health Inequalities</h2>
+      <p>
+        My recent research examines mortality and health inequalities between migrants and native populations in high-income countries. 
+        I analyse how country of origin shapes mortality advantages and how these patterns evolve over time.
+      </p>
+      <p>
+        This work relies on large-scale administrative data and contributes to ongoing debates on migrant health and demographic change in Europe and the UK.
+      </p>
 
-Beyond research, I am actively involved in global initiatives aimed at strengthening actuarial education in low- and middle-income countries, notably through the Actuarial Faculty Development 
-Program (AFDP) and the Global Actuarial Initiative (GAIN).
+      <a href="#" class="btn">View Paper</a>
+      <a href="#" class="btn">Project</a>
+    </div>
 
-My academic work includes publications in peer-reviewed international journals and leadership of several research projects as Principal Investigator, in Algeria, Spain, and the United Kingdom. 
-Through this work, I aim to contribute to evidence-based policymaking and to advance the integration of actuarial science, demography, and public policy.
-</p>
+    <div class="research-plot">
+      <img src="images/migrant-mortality.png" alt="Migrant mortality plot">
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="research-block reverse">
+    
+    <div class="research-plot">
+      <img src="images/pensions.png" alt="Pension sustainability plot">
+    </div>
+
+    <div class="research-text">
+      <h2>Population Ageing & Pension Sustainability</h2>
+      <p>
+        I study the financial sustainability of pension systems under population ageing, with a focus on PAYG schemes. 
+        My work explores reform options such as contribution caps and demographic risk management strategies.
+      </p>
+      <p>
+        I also develop simulation tools to assess long-term system balance under alternative policy scenarios.
+      </p>
+
+      <a href="#" class="btn">Simulator</a>
+      <a href="#" class="btn">Publications</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="alt-bg">
+  <div class="research-block">
+    
+    <div class="research-text">
+      <h2>Health Expectancy</h2>
+      <p>
+        My research on health expectancy examines how increases in longevity interact with chronic disease prevalence. 
+        I develop models combining mortality and morbidity to estimate healthy life expectancy and its future evolution.
+      </p>
+
+      <a href="#" class="btn">Read More</a>
+    </div>
+
+    <div class="research-plot">
+      <img src="images/health-expectancy.png" alt="Health expectancy plot">
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="research-block reverse">
+    
+    <div class="research-plot">
+      <img src="images/algeria-mortality.png" alt="Mortality Algeria plot">
+    </div>
+
+    <div class="research-text">
+      <h2>Mortality Evolution in Algeria</h2>
+      <p>
+        A core part of my work focuses on mortality dynamics in Algeria, including life table construction, mortality forecasting, 
+        and long-term demographic trends.
+      </p>
+
+      <a href="#" class="btn">Datasets</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="alt-bg">
+  <h2>Professional Roles</h2>
+
+  <div class="roles">
+
+    <div class="role-card">
+      <h3>Accredited Actuary</h3>
+      <p>Nationally accredited actuary with experience in insurance and social security systems.</p>
+    </div>
+
+    <div class="role-card">
+      <h3>Policy Advisor</h3>
+      <p>Contributor to national reforms and collaborations with multiple government ministries.</p>
+    </div>
+
+    <div class="role-card">
+      <h3>Consultant</h3>
+      <p>Work with UN agencies and international organisations on demographic and social protection issues.</p>
+    </div>
+
+    <div class="role-card">
+      <h3>Academic Engagement</h3>
+      <p>Active in global initiatives promoting actuarial science (AFDP, GAIN).</p>
+    </div>
+
+  </div>
 </section>
 
 <section id="featured">
