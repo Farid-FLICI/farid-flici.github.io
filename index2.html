@@ -84,14 +84,23 @@ header{
   position: relative;
 }
 
-.social-icons a i.fa-orcid { color: #A6CE39; }
-.social-icons a i.fa-graduation-cap { color: #4285F4; }
-.social-icons a i.fa-database { color: #ff6c00; }
-.social-icons a i.fa-researchgate { color: #00CCBB; }
-.social-icons a i.fa-award { color: #f39c12; }
-.social-icons a i.fa-github { color: #333; }
-.social-icons a i.fa-linkedin { color: #0077B5; }
-.social-icons a i.fa-x-twitter { color: #1DA1F2; }
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--green);
+  transform: translateY(-2px);
+}
   
 /* NAV */
 nav{
@@ -194,10 +203,10 @@ footer{
   <a href="https://github.com/Farid-FLICI" target="_blank" title="GitHub">
   <i class="fab fa-github"></i>  </a>
 
-  <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn">
+  <a href="https://www.linkedin.com/in/farid-flici-659a7625/" target="_blank" title="LinkedIn">
   <i class="fab fa-linkedin"></i>  </a>
 
-  <a href="https://twitter.com/" target="_blank" title="Twitter / X">
+  <a href="https://x.com/Farid_FLICI" target="_blank" title="Twitter / X">
   <i class="fab fa-x-twitter"></i>  </a>
 </div>
   
