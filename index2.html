@@ -80,31 +80,46 @@ header{
   border-radius:50%;
   border:4px solid var(--green);
 }
-.social-icons a {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255,255,255,0.1);
-  border-radius: 50%;
-  color: white;
-  transition: 0.3s;
+
+.social-icons {
+  margin-top: 1rem;
 }
 
-/* Hover colors (by platform) */
-.social-icons a:hover i.fa-orcid { color: #A6CE39; }
-.social-icons a:hover i.fa-graduation-cap { color: #4285F4; } /* Google Scholar */
-.social-icons a:hover i.fa-database { color: #ff6c00; } /* Scopus-like */
-.social-icons a:hover i.fa-researchgate { color: #00CCBB; }
-.social-icons a:hover i.fa-award { color: #f39c12; } /* Publons */
-.social-icons a:hover i.fa-github { color: #333; }
-.social-icons a:hover i.fa-linkedin { color: #0077B5; }
-.social-icons a:hover i.fa-x-twitter { color: #1DA1F2; }
+.social-icons a {
+  font-size: 1.4rem;
+  margin-right: 12px;
+  color: white;                 /* default = white */
+  transition: all 0.3s ease;
+}
 
+/* Hover colors */
+.social-icons a.orcid:hover {
+  color: #a6ce39;
+}
+
+.social-icons a.scholar:hover {
+  color: #4285F4;
+}
+
+.social-icons a.rg:hover {
+  color: #00ccbb;
+}
+
+.social-icons a.github:hover {
+  color: #333;
+}
+
+.social-icons a.linkedin:hover {
+  color: #0077b5;
+}
+
+.social-icons a.twitter:hover {
+  color: #000000; /* X style */
+}
+
+/* Optional: subtle animation */
 .social-icons a:hover {
-  background: white;
-  transform: translateY(-3px);
+  transform: translateY(-2px) scale(1.1);
 }
 
 
@@ -192,29 +207,31 @@ footer{
 <p class="subtitle">Actuarial Demography | Mortality & Morbidity | Migrant Health | Pensions | Social Protection</p>
 
 <div class="social-icons">
- <a href="https://orcid.org/0000-0002-1954-2120" target="_blank" title="ORCID">
- <i class="fab fa-orcid"></i>  </a>
+  <a href="https://orcid.org/0000-0002-1954-2120" target="_blank" class="icon orcid">
+    <i class="fab fa-orcid"></i>
+  </a>
+
+  <a href="https://scholar.google.com" target="_blank" class="icon scholar">
+    <i class="fas fa-graduation-cap"></i>
+  </a>
+
+  <a href="https://www.researchgate.net" target="_blank" class="icon rg">
+    <i class="fab fa-researchgate"></i>
+  </a>
+
+  <a href="https://github.com/Farid-FLICI" target="_blank" class="icon github">
+    <i class="fab fa-github"></i>
+  </a>
+
+  <a href="https://www.linkedin.com/in/farid-flici-659a7625" target="_blank" class="icon linkedin">
+    <i class="fab fa-linkedin"></i>
+  </a>
+
+
+<a href="https://twitter.com/YOUR_HANDLE" target="_blank" class="icon twitter">
+<i class="fab fa-x-twitter"></i>
+</a>
   
- <a href="https://scholar.google.com/citations?user=czeu-dwAAAAJ&hl=en" target="_blank" title="Google Scholar">
- <i class="fas fa-graduation-cap"></i> </a>
-  
- <a href="https://www.scopus.com/authid/detail.uri?authorId=57209236573" target="_blank" title="Scopus">
- <i class="fas fa-database"></i>  </a>
-
- <a href="https://www.researchgate.net/profile/Farid_Flici" target="_blank" title="ResearchGate">
- <i class="fab fa-researchgate"></i>  </a>
-
-  <a href="https://publons.com/researcher/3172040/flici-farid/" target="_blank" title="Publons">
-  <i class="fas fa-award"></i>  </a>
-
-  <a href="https://github.com/Farid-FLICI" target="_blank" title="GitHub">
-  <i class="fab fa-github"></i>  </a>
-
-  <a href="https://www.linkedin.com/in/farid-flici-659a7625/" target="_blank" title="LinkedIn">
-  <i class="fab fa-linkedin"></i>  </a>
-
-  <a href="https://x.com/Farid_FLICI" target="_blank" title="Twitter / X">
-  <i class="fab fa-x-twitter"></i>  </a>
 </div>
   
 </div>
