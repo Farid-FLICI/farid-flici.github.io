@@ -81,16 +81,23 @@ header{
   border:4px solid var(--green);
 }
 
-.social-icons {
+  .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;          /* spacing between icons */
+  flex-wrap: wrap;    /* optional: wrap on small screens */ 
   margin-top: 1rem;
 }
 
-.social-icons a {
+ .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.4rem;
   margin-right: 12px;
   color: white;                 /* default = white */
   transition: all 0.3s ease;
-}
+} 
 
 /* Hover colors */
 .social-icons a.orcid:hover {
