@@ -81,32 +81,18 @@ header{
   border:4px solid var(--green);
 }
 
-.social-icons a {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255,255,255,0.1);
-  border-radius: 50%;
-  color: white;
-  transition: 0.3s;
-}
-
-/* Hover colors (by platform) */
-.social-icons a:hover i.fa-orcid { color: #A6CE39; }
-.social-icons a:hover i.fa-graduation-cap { color: #4285F4; } /* Google Scholar */
-.social-icons a:hover i.fa-database { color: #ff6c00; } /* Scopus-like */
-.social-icons a:hover i.fa-researchgate { color: #00CCBB; }
-.social-icons a:hover i.fa-award { color: #f39c12; } /* Publons */
-.social-icons a:hover i.fa-github { color: #333; }
-.social-icons a:hover i.fa-linkedin { color: #0077B5; }
-.social-icons a:hover i.fa-x-twitter { color: #1DA1F2; }
-
 .social-icons a:hover {
-  background: white;
-  transform: translateY(-3px);
+  color: white;
 }
+
+.social-icons a:hover:nth-child(1) { background:#A6CE39; } /* ORCID */
+.social-icons a:hover:nth-child(2) { background:#4285F4; } /* Scholar */
+.social-icons a:hover:nth-child(3) { background:#ff6c00; }
+.social-icons a:hover:nth-child(4) { background:#00CCBB; }
+.social-icons a:hover:nth-child(5) { background:#f39c12; }
+.social-icons a:hover:nth-child(6) { background:#333; }
+.social-icons a:hover:nth-child(7) { background:#0077B5; }
+.social-icons a:hover:nth-child(8) { background:#1DA1F2; }
 /* NAV */
 nav{
   position:sticky;
