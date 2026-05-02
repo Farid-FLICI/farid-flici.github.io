@@ -112,7 +112,22 @@ header{
 
 /* Hover colors */
 .social-icons a.orcid:hover {  color: #a6ce39;}
-.social-icons a.scholar:hover {  color: #4285F4;}
+.social-icons a.scopus img{
+  width:20px;
+  height:20px;
+  filter: brightness(0) invert(1); /* turns it white */
+  transition:0.3s;
+}
+
+.icon-svg{
+  width:20px;
+  height:20px;
+  fill:white;
+  transition:0.3s;
+}
+
+.social-icons a.scopus:hover .icon-svg{  fill:#f36f21;}
+  .social-icons a.scholar:hover {  color: #4285F4;}
 .social-icons a.rg:hover {  color: #00ccbb;}
 .social-icons a.github:hover {  color: #333;}
 .social-icons a.linkedin:hover {  color: #0077b5;}
@@ -288,6 +303,13 @@ footer{
 <div class="social-icons">
   <a href="https://orcid.org/0000-0002-1954-2120" target="_blank" class="icon orcid">
     <i class="fab fa-orcid"></i>
+  </a>
+
+ <a href="https://www.scopus.com/authid/detail.uri?authorId=YOUR_ID"    target="_blank"    class="scopus">
+    <svg viewBox="0 0 24 24" class="icon-svg">
+    <circle cx="12" cy="12" r="10"></circle>
+    <text x="12" y="16" text-anchor="middle" font-size="10" font-family="Arial" fill="white">SC</text>
+  </svg>
   </a>
 
   <a href="https://scholar.google.fr/citations?hl=fr&user=czeu-dwAAAAJ&view_op=list_works" target="_blank" class="icon scholar">
