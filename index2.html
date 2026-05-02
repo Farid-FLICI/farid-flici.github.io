@@ -117,8 +117,23 @@ footer{  background:var(--primary);  color:white;  text-align:center;  padding:2
 <a href="https://www.linkedin.com/in/farid-flici-659a7625" target="_blank" class="icon linkedin">                              <i class="fab fa-linkedin"></i>        </a>
 <a href="https://twitter.com/Farid_FLICI" target="_blank" class="icon twitter">                                                <i class="fab fa-x-twitter"></i>       </a>
 <a href="https://www.youtube.com/@faridflici9337" target="_blank" class="icon youtube">                                        <i class="fab fa-youtube"></i>         </a>
-<a href="mailto:farid.flici@gmail.com" class="icon email">  <i class="fas fa-envelope"></i></a>
-</div>
+<a href="#" class="icon email" onclick="copyEmail(event)" id="emailIcon" title="Copy email">
+  <i class="fas fa-envelope"></i></a>
+<span id="copyMsg" style="display:none; color:white; margin-left:10px;">  Copied!</span>
+
+<script>
+function copyEmail(e) {
+  e.preventDefault();
+  const email = "farid.flici@gmail.com";
+  navigator.clipboard.writeText(email).then(() => {
+    const msg = document.getElementById("copyMsg");
+    msg.style.display = "inline";
+    setTimeout(() => {
+      msg.style.display = "none";
+    }, 1500);
+  });
+}
+</script></div>
 
 </div>
 <img src="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/picff2.png">
