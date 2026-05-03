@@ -40,7 +40,7 @@
 .hero img{  width:135px;  height:135px;  border-radius:50%;  border:4px solid var(--green);}
 .social-icons {  display: flex;  align-items: center;  gap: 14px;  /* spacing between icons */  flex-wrap: wrap; /* optional: wrap on small screens */ margin-top: 1rem;}
 .social-icons a {  display: inline-flex;   align-items: center;  justify-content: center;  font-size: 1.4rem;  margin-right: 12px;  color: white;  /* default = white */  transition: all 0.3s ease;  text-decoration: none;} 
-
+.tutorial-grid {  display: grid;  grid-template-columns: 2fr 1fr;  gap: 2rem;}
 /* Hover colors */
 .social-icons a.orcid:hover {  color: #a6ce39;}
 .icon-svg{  width:20px;  height:20px;  fill:white;  transition:0.3s;}
@@ -141,58 +141,64 @@ function copyEmail(e) {
 </header>
 
 <nav>
-<a href="./index2.html">Home</a>
-<a href="./pub2.html">Publications</a>
-<a href="./conf2.html">Conferences</a>
-<a href="./tutorial2.html">Tutorials</a>
-<a href="./tools2.html">Tools</a>
-<a href="./data2.html">Data</a>
-<a href="./media2">Media</a>
+<a href="./index.html">Home</a>
+<a href="./pub.html">Publications</a>
+<a href="./conf.html">Conferences</a>
+<a href="./tutorial.html">Tutorials</a>
+<a href="./tools.html">Tools</a>
+<a href="./data.html">Data</a>
+<a href="./media">Media</a>
 </nav>
 
 <main class="container">
 
-  <section>
-  <h2> Tutorial #1: Demographic Projections with R </h2>  
- <div style="position: absolute; top: 90px; left: 0; right: 0; bottom: 40px">
-   <iframe height="100%" width="100%" frameborder="no" src="https://farid-flici.gitbook.io/pop-proj-dz/"> </iframe>
-   <hr>
-   </div>  
-    
- <div style="position: absolute; top: 93%; left: 100px; right: 40px; bottom: 0px">                                                                                                                                             
- <p style="font-text:70%"> 
-    The Tutorial can be dowloaded as a PDF document from ResearchGate by clicking: 
-   <a href = "https://www.researchgate.net/publication/351784107_Population_projections_using_R_-_including_graphical_dynamic_presentations"  target="_blank"> 
-     [Access the PDF Version]   </a>
-</p>                                                                                                                                             
-</div>    
-  </section>
-<hr>
- <section>
-    <h2> Tutorial #2: Multi-scenarios Pop Projections with RR </h2>  
-   <div style="position: absolute; top: 90px; left: 0; right: 0; bottom: 40px">
-   <iframe height="100%" width="100%" frameborder="no" src="https://farid-flici.gitbook.io/multi-scenarios-population-projection-for-algeria/"> </iframe>
-   <hr>
-   </div>  
-    
+<section class="dataset">
+  <h3>Tutorial #1: Demographic Projections with R</h3>
 
- <div style="position: absolute; top: 93%; left: 100px; right: 40px; bottom: 0px">                                                                                                                                             
- <p style="font-text:70%"> 
-    The Tutorial can be dowloaded as a PDF document from ResearchGate by clicking: 
-   <a href = "https://www.researchgate.net/publication/351821350_Muti-Scenarios_Population_Projection_for_Algeria_using_R"  target="_blank"> 
-     [Access the PDF Version]   </a>
-</p>                                                                                                                                             
-</div>    
-  </section>
+  <iframe 
+    src="https://farid-flici.gitbook.io/pop-proj-dz/" 
+    style="width:100%; height:500px; border:none; border-radius:10px;">
+  </iframe>
+
+  <p style="margin-top:15px; font-size:0.9rem;">
+    The tutorial can be downloaded as a PDF from ResearchGate:
+    <a href="https://www.researchgate.net/publication/351784107_Population_projections_using_R_-_including_graphical_dynamic_presentations" target="_blank">
+      [Access the PDF Version]
+    </a>
+  </p>
+</section>
+
 <hr>
- <section>
-    <h2> Tutorial #3: Data Manipulation With R </h2>  
-    <div style="position: absolute; top: 200px; left: 150; right: 150; bottom: 40px">
-<p style="font-size=150%"> Flici, F. (2020). R basics – Data manipulation, an R tutorial. Available at:[  
-<a href= "https://rpubs.com/Farid_Flici/R_basics_18_05_2020"  target="_blank"> https://rpubs.com/Farid_Flici/R_basics_18_05_2020 </a>], 
-  Version of 2020-05-18. </p>
-   </div>     
-  </section>
+
+<section class="dataset">
+  <h3>Tutorial #2: Multi-scenarios Pop Projections with R</h3>
+
+  <iframe 
+    src="https://farid-flici.gitbook.io/multi-scenarios-population-projection-for-algeria/" 
+    style="width:100%; height:500px; border:none; border-radius:10px;">
+  </iframe>
+
+  <p style="margin-top:15px; font-size:0.9rem;">
+    The tutorial can be downloaded as a PDF from ResearchGate:
+    <a href="https://www.researchgate.net/publication/351821350_Muti-Scenarios_Population_Projection_for_Algeria_using_R" target="_blank">
+      [Access the PDF Version]
+    </a>
+  </p>
+</section>
+
+<hr>
+
+<section class="dataset">
+  <h3>Tutorial #3: Data Manipulation with R</h3>
+
+  <p style="font-size:0.95rem;">
+    Flici, F. (2020). R basics – Data manipulation, an R tutorial.  
+    Available at:
+    <a href="https://rpubs.com/Farid_Flici/R_basics_18_05_2020" target="_blank">
+      https://rpubs.com/Farid_Flici/R_basics_18_05_2020
+    </a>
+  </p>
+</section>
 </main>
 
 <footer>
