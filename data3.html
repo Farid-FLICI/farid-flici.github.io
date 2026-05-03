@@ -41,6 +41,16 @@
 .social-icons {  display: flex;  align-items: center;  gap: 14px;  /* spacing between icons */  flex-wrap: wrap; /* optional: wrap on small screens */ margin-top: 1rem;}
 .social-icons a {  display: inline-flex;   align-items: center;  justify-content: center;  font-size: 1.4rem;  margin-right: 12px;  color: white;  /* default = white */  transition: all 0.3s ease;  text-decoration: none;} 
 
+.data-section {  margin: 3rem 0;}
+.dataset {  background: white;  border-radius: 12px;  padding: 2rem;  margin-bottom: 2rem;  box-shadow: var(--shadow);}
+.dataset h3 {  color: var(--primary);  margin-bottom: 0.5rem;}
+.dataset p {  margin-bottom: 1rem;  font-size: 0.95rem;}
+.dataset-grid {  display: grid;  grid-template-columns: 2fr 1fr;  gap: 2rem;  align-items: center;}
+.dataset img {  width: 100%;  border-radius: 10px;}
+.download-grid {  display: grid;  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  gap: 0.8rem;  margin-top: 1rem;}
+.download-btn {  background: var(--primary);  color: white;  padding: 0.5rem;  text-align: center;  border-radius: 6px;  font-size: 0.85rem;  text-decoration: none;  display: block;}
+.download-btn:hover {  background: var(--green);  color: black;}
+@media(max-width:768px){  .dataset-grid {    grid-template-columns: 1fr;  }}  
 /* Hover colors */
 .social-icons a.orcid:hover {  color: #a6ce39;}
 .icon-svg{  width:20px;  height:20px;  fill:white;  transition:0.3s;}
@@ -141,73 +151,61 @@ function copyEmail(e) {
 </header>
 
 <nav>
-<a href="./index2.html">Home</a>
-<a href="./pub2.html">Publications</a>
-<a href="./conf2.html">Conferences</a>
-<a href="./tutorial2.html">Tutorials</a>
-<a href="./tools2.html">Tools</a>
-<a href="./data2.html">Data</a>
-<a href="./media2">Media</a>
+<a href="./index.html">Home</a>
+<a href="./pub.html">Publications</a>
+<a href="./conf.html">Conferences</a>
+<a href="./tutorial.html">Tutorials</a>
+<a href="./tools.html">Tools</a>
+<a href="./data.html">Data</a>
+<a href="./media">Media</a>
 </nav>
 
 <main class="container">
 
-<section>
-  <h2>MORTALITY DATASETS</h2>
-<h3 style="font-size:110%; text-align: left;"> Mortality Surface, Algeria, 1977-2014 </h3>
+<section class="data-section">
+<h2>Mortality Datasets</h2>
 
-<div align="center"  style="margin-bottom:20px">
+<div class="dataset">
 
-<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/image019.gif?raw=true", height="400"  style="float: center;" />
-<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/image011.gif?raw=true", height="400" style="float: center;"  />
+<h3>Mortality Surface, Algeria (1977–2014)</h3>
+
+<div class="dataset-grid">
+
+<div>
+<p>
+This dataset reconstructs the full mortality surface for Algeria using ONS life tables. 
+Missing years were estimated, and mortality rates were interpolated to single ages and extended to older ages.
+</p>
+
+<p style="font-size:0.85rem; color:#555;">
+Source: ONS publications. Methods detailed in Flici (2014, 2016, 2020).
+</p>
+
+<div class="download-grid">
+<a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Mortality_Rates_Males_nQx.txt" class="download-btn" target="_blank">Crude Males</a>
+<a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Mortality_Rates_Females_nQx.txt" class="download-btn" target="_blank">Crude Females</a>
+<a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Mortality_Rates_Both_Sexes_nQx.txt" class="download-btn" target="_blank">Crude Total</a>
+
+<a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/completed_Mortality_Rates_Males_nQx.txt" class="download-btn" target="_blank">Completed Males</a>
+<a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/completed_Mortality_Rates_Females_nQx.txt" class="download-btn" target="_blank">Completed Females</a>
+<a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/completed_Mortality_Rates_Both_sexes_nQx.txt" class="download-btn" target="_blank">Completed Total</a>
+
+<a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Single_Age_Mortality_Rates_Males_qx.txt" class="download-btn" target="_blank">ASMR Males</a>
+<a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Single_Age_Mortality_Rates_Females_qx.txt" class="download-btn" target="_blank">ASMR Females</a>
+<a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Single_Age_Mortality_Rates_Both_Sexes_qx.txt" class="download-btn" target="_blank">ASMR Total</a>
+</div>
 
 </div>
-   
-<p style="text-align:center; font-size:70%"> <i> Source: Annual publications of the Office for National Statistics ONS (Five-ages mortality rates) ; missing data has been estimated by Flici (<a href="#2014">2014</a>) , Single ages mortality rates interpolated and old age mortality rates have been extrapolated by Flici (<a href="#2020">2020</a> ).</i> </p>
 
-   
-   <hr>
+<div>
+<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/image019.gif?raw=true">
+<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/image011.gif?raw=true" style="margin-top:10px;">
+</div>
 
-<li> Mortality data is available startting from 1977. Based on vital statistics, the Office of National Statistics (ONS) had published abbridged life tables for males, females, and both sexes population. Some years of the period 1977-1997 were missing, and some life tables were closed out before reaching the age of 80 years old. </li>
-
-<li>Later on, we have estimated missing data in the crude surface (Flici, <a href="./pub.html/#2014">2014</a>), and we have interpolated and extended the Age Specific Mortality years to older ages (Flici, <a href="./pub.html/#2016">2016</a>). The paper was revised and published in its final version as Flici (<a href="./pub.html/#2020">2020</a>).</li>
-
-<li>The three type of data for males, females, and both sexes population can be accessed through the links below: </li>
-
-<p align="center">
-
-<table style="width:80%" align="center">
-  <tr style="text-align:center">
-    <th> --- </th>
-    <th>Males</th> 
-    <th>Females</th>
-    <th>Both Sexes</th>
-  </tr>
-
-  <tr>
-    <td style="text-align:left"><b>ONS data</b></td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Mortality_Rates_Males_nQx.txt" target="_blank">  crude_nQx_males.txt  </a> </button></td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Mortality_Rates_Females_nQx.txt" target="_blank"> crude_nQx_females.txt </a></button> </td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Mortality_Rates_Both_Sexes_nQx.txt" target="_blank"> crude_nQx_both_sexes.txt </a> </button></td>
-  </tr>
-  <tr>
-   <td  style="text-align:left"><b>ONS data being completed</b></td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/completed_Mortality_Rates_Males_nQx.txt" target="_blank"> completed_nQx_males.txt </a></button> </td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/completed_Mortality_Rates_Females_nQx.txt" target="_blank"> completed_nQx_females.txt </a></button> </td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/completed_Mortality_Rates_Both_sexes_nQx.txt" target="_blank"> completed_nQx_both_sexes.txt </a> </button></td>
-  </tr>
-  <tr>
-  <td  style="text-align:left"><b>ASMRS detailled mortality surface</b></td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Single_Age_Mortality_Rates_Males_qx.txt" target="_blank"> ASMRs_males.txt </a> </button></td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Single_Age_Mortality_Rates_Females_qx.txt" target="_blank"> ASMRs_females.txt </a> </button></td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Single_Age_Mortality_Rates_Both_Sexes_qx.txt" target="_blank"> ASMRs_both_sexes.txt </a> </button></td>
-  </tr>
-</table>
-
-</p>   
-   
-   </div>
+</div>
+</div>
 </section>
+<hr>
 
 <section>
   <h2>FERTILITY DATASETS</h2>
