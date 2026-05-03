@@ -52,12 +52,9 @@
 .download-btn:hover {  background: var(--green);  color: black;}
 @media(max-width:768px){  .dataset-grid {    grid-template-columns: 1fr;  }}  
 
-.references {  margin-top: 1.5rem;}
-.ref-toggle {  background: none;  border: none;  color: var(--primary);  font-weight: 500;  cursor: pointer;  padding: 0;}
-.ref-toggle:hover {  color: var(--green);}
-.ref-content {  display: none;  margin-top: 0.8rem;  padding: 1rem;  background: #f4f6f8;  border-radius: 8px;  font-size: 0.85rem;}
-.ref-content ul {  padding-left: 1rem;}
-.ref-content li {  margin-bottom: 0.5rem;}  
+.ref-content.static {  margin-top: 1rem;  padding: 1rem 1.2rem;  background: #f4f6f8;  border-left: 4px solid var(--primary);  border-radius: 8px;  font-size: 0.85rem;}
+.ref-content.static ul {  padding-left: 1.2rem;}
+.ref-content.static li {  margin-bottom: 0.6rem;  line-height: 1.4;}
 /* Hover colors */
 .social-icons a.orcid:hover {  color: #a6ce39;}
 .icon-svg{  width:20px;  height:20px;  fill:white;  transition:0.3s;}
@@ -207,7 +204,7 @@ Source: ONS publications. Methods detailed in Flici (2015, 2020, 2025).
     📚 References
   </button>
 
-  <div class="ref-content">
+  <div class="ref-content static">
     <ul>
    <li>Flici, F. (2015). Estimation of the missing data in the Algerian mortality surface by using an age-time-segmented Lee-Carter Model, SocArXiv. 
   <a href="https://ideas.repec.org/p/osf/socarx/xufwg.html" target="_blank">https://ideas.repec.org/p/osf/socarx/xufwg.html</a></li>
@@ -333,13 +330,5 @@ Source: ONS publications. Methods detailed in Flici (2015, 2020, 2025).
 <footer>
 <p>© 2026 Farid Flici.</p>
 </footer>
-
-        <script>
-function toggleRefs(btn) {
-  const content = btn.nextElementSibling;
-  content.style.display = 
-    content.style.display === "block" ? "none" : "block";
-}
-</script>
 </body>
 </html>  
