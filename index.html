@@ -1,391 +1,382 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Farid FLICI</title>
-<style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farid Flici</title>
 
-p {font-family:Palatino Linotype;
-  font-size:110%;
-  text-align:justify}
-  
-li { font-family:Palatino Linotype;
-     font-size:100%;
-     text-align:justify}
-     
-td  {text-align:center}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYG7V4ZKEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SYG7V4ZKEK');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-h2 {color:blue;
-    font-family:Century Gothic;
-    text-align:left}
-
-.zoomA {
-        width: 200px;
-        height: auto;
-        /* ease | ease-in | ease-out | linear */
-        transition: transform ease-in-out 0.3s;
-      }
-      .zoomA:hover {
-        transform: scale(2.5);
-      }
-
-h3 {
-  margin: 10px 0 5px;
-  text-align:left
+<style> 
+:root {
+  --primary:#001f3f;
+  --green:#2ecc71;
+  --light:#f7f9fb;
+  --white:#ffffff;
+  --shadow:0 8px 25px rgba(0,0,0,0.08);
 }
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+ body{  font-family:'Roboto',sans-serif;  background:var(--light);  color:#222;}
+.container{  max-width:1100px;  margin:auto;  padding:0 1.5rem;}
+ header{   background: linear-gradient(135deg, #001f3f 0%, #003366 100%);  color:white;  padding:1.5rem 0;}
+.hero{  display:flex;  flex-wrap:wrap;  align-items:center;  justify-content:space-between;  gap:1.5rem;}
+.hero-text{  max-width:700px;}
+.hero-text h1{  font-size:2rem;}
+.subtitle{  margin:0.25rem 0;}
+.tagline{  margin:1rem 0;  opacity:0.9;}
+.quick-links a{  color:white;  margin-right:1rem;  text-decoration:none;}
+.quick-links a:hover{  color:var(--green);}
+.hero img{  width:135px;  height:135px;  border-radius:50%;  border:4px solid var(--green);}
+.social-icons {  display: flex;  align-items: center;  gap: 14px;  /* spacing between icons */  flex-wrap: wrap; /* optional: wrap on small screens */ margin-top: 1rem;}
+.social-icons a {  display: inline-flex;   align-items: center;  justify-content: center;  font-size: 1.4rem;  margin-right: 12px;  color: white;  /* default = white */  transition: all 0.3s ease;  text-decoration: none;} 
+
+/* Hover colors */
+.social-icons a.orcid:hover {  color: #a6ce39;}
+.icon-svg{  width:20px;  height:20px;  fill:white;  transition:0.3s;}
+.social-icons a.scopus:hover .icon-svg{  fill:#f36f21;}
+.social-icons a.wos:hover .icon-svg{  fill:#8f3a84;}
+.social-icons a.scholar:hover {  color: #4285F4;}
+.social-icons a.rg:hover {  color: #00ccbb;}
+.social-icons a.github:hover {  color: #333;}
+.social-icons a.linkedin:hover {  color: #0077b5;}
+.social-icons a.twitter:hover {  color: #000000; /* X style */}
+.social-icons a.youtube:hover  { color: #cd201f; }
+.icon {  color: white;  font-size: 1.3rem;  margin: 0 0.5rem;  transition: 0.3s;  text-decoration: none;}
+.icon.email:hover {  color: #e74c3c; /* red tone */}
+.social-icons a:hover {  transform: translateY(-2px) scale(1.1);}
+  
+/* NAV */
+nav{  position:sticky;  top:0;  background:var(--primary);  padding:0.8rem;  display:flex;  justify-content:center;  gap:1.5rem;  z-index:1000;}
+nav a{  color:white;  text-decoration:none;}
+nav a:hover{  color:var(--green);}
+section{  margin:2rem 0;}
+h2{  color:var(--primary);  margin-bottom:1rem;}
+a {  text-decoration: none;  color: blue;}
+.grid{  display:grid;  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));  gap:1.5rem;}
+.card{  background:white;  padding:1.5rem;  border-radius:12px;  box-shadow:var(--shadow);  transition:0.3s;}
+.card:hover{  transform:translateY(-5px);}
+.two-col{  display:grid;  grid-template-columns:1fr 1fr;  gap:2rem;}
+
+@media(max-width:768px){  .hero{flex-direction:column;text-align:center;}  .two-col{grid-template-columns:1fr;}}
+footer{  background:var(--primary);  color:white;  text-align:center;  padding:2rem;  margin-top:3rem;}
+
+ .research-block{  display:grid;  grid-template-columns: 2fr 1fr;  gap:2rem;  align-items:center;  margin-bottom:2.5rem;}
+ .research-block.reverse{  grid-template-columns: 1fr 2fr;}
+ .research-text p{  margin-bottom:1rem;}
+ .research-plot img{  width:100%;  border-radius:10px;  box-shadow:var(--shadow);}
+
+/* SECTION BACKGROUND ALT */
+.alt-bg{  background:var(--white);  padding:2rem;  border-radius:12px;}
+
+/* BUTTONS */
+.btn{  display:inline-block;  margin-top:1rem;  margin-right:0.8rem;  padding:0.5rem 1rem;  background:var(--primary);  color:white;  text-decoration:none;  border-radius:6px;  font-size:0.9rem;}
+.btn:hover{  background:var(--green);  color:black;}
+
+/* ROLE CARDS */
+.roles{  display:grid;  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));  gap:1.5rem;}
+.role-card{  background:white;  padding:1.5rem;  border-radius:12px;  box-shadow:var(--shadow);  text-align:center;}
+.role-card h3{  margin-bottom:0.5rem;  color:var(--primary);}
+
+@media(max-width:768px){  .research-block,  .research-block.reverse{    grid-template-columns:1fr;  }}
+</style>  
 </style>
+
 </head>
 
-<body font-family: 'Roboto', sans-serif;  color: #fff; style="margin-top: 5px; margin-left: 50px; margin-right: 50px;">
+<body>
 
-<div align="center" style="margin-bottom:0px">
-
-<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/image001.gif?raw=true", height="160"  style="float: left;"/>
-<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/pop_pyramidFF-.gif?raw=true", height="160" style="float: center;"/>
-<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/image003.gif?raw=true", height="160"  style="float: right;"/>
-
+<header>
+<div class="container hero">
+<div class="hero-text">
+<h1>Farid FLICI, PhD.</h1>
+<p class="subtitle">Actuarial Demography | Population DataScience</p>
+<div>
+<p class="subtitle"> Mortality | Morbidity | Aging | Migrant Health | Pensions | Social Protection</p>
 </div>
-
-<hr> 
   
-<h1 align="center"> Farid FLICI </h1>
-  
-<p style="font-size:90%; margin-top:0px margin-bottom:0px ; text-align:center; font-family:Times New Roman">Research Center in Applied Economics for Developement, CREAD <br>
- Street Djamal Eddine El-Afghani, Rostomia, Algiers 16011, Algeria<br>
-Phone: +213 23 18 00 88 |  e-mail: <a href="farid.flici@cread.dz" > farid.flici@cread.dz </p>
+<div class="social-icons">  
+<a href="https://orcid.org/0000-0002-1954-2120" target="_blank" class="icon orcid">                                           <i class="fab fa-orcid"></i>          </a>
+<a href="https://www.scopus.com/authid/detail.uri?authorId=57209236573" target="_blank" class="scopus">  <svg viewBox="2 2 24 24" class="icon-svg">
+    <circle cx="14" cy="14" r="12"></circle> <text x="14" y="16" text-anchor="middle" font-size="10" font-family="Arial" fill="#4d4d4d">SC</text>  </svg>            </a>
+<a href="https://www.webofscience.com/wos/author/record/AAC-3268-2019"    target="_blank"    class="wos">    <svg viewBox="2 2 24 24" class="icon-svg">
+    <circle cx="14" cy="14" r="12"></circle> <text x="14" y="16" text-anchor="middle" font-size="10" font-family="Arial" fill="#4d4d4d">WoS</text>  </svg>            </a>
+<a href="https://scholar.google.fr/citations?hl=fr&user=czeu-dwAAAAJ&view_op=list_works" target="_blank" class="icon scholar"> <i class="fas fa-graduation-cap"></i>  </a>
+<a href="https://www.researchgate.net/profile/Farid-Flici" target="_blank" class="icon rg">                                    <i class="fab fa-researchgate"></i>    </a>
+<a href="https://github.com/Farid-FLICI" target="_blank" class="icon github">                                                  <i class="fab fa-github"></i>          </a>
+<a href="https://www.linkedin.com/in/farid-flici-659a7625" target="_blank" class="icon linkedin">                              <i class="fab fa-linkedin"></i>        </a>
+<a href="https://twitter.com/Farid_FLICI" target="_blank" class="icon twitter">                                                <i class="fab fa-x-twitter"></i>       </a>
+<a href="https://www.youtube.com/@faridflici9337" target="_blank" class="icon youtube">                                        <i class="fab fa-youtube"></i>         </a>
+<a href="#" class="icon email" onclick="copyEmail(event)" id="emailIcon" title="Copy email">
+  <i class="fas fa-envelope"></i></a>
+<span id="copyMsg" style="display:none; color:white; margin-left:10px;">  Copied!</span>
 
-<hr>
-<p style="text-align:center; font-size:100%;font-family:Century Gothic"> <b>
-<a  href="#bio">About</a>
-<a> |  </a>
-<a  href="#cv">CV </a>
-<a> |  </a>
-<a  href="#pub">Publications</a>
-<a> |  </a>
-<a  href="#tuto">Tutorials</a>
-<a> |  </a>
-<a  href="#conf">Conferences</a>
-<a> |  </a>
-<a  href="#proj">Projects</a>
-<a> |  </a>
-<a  href="#data">Demographic Data</a>
-<a> |  </a>
-<a  href="#yout">Youtube</a>
-<a> |  </a>
-<a  href="#med">Media</a>
-<a> |  </a>
-<a  href="#acad">Academic Platforms</a>
-<a> |  </a>
-<a  href="#soc">Social Media</a>
-</b>
-
-<hr>
-
-<h2 id="bio"> About</h2>
-
-<p style="font-size:140%; margin-top:0">
-
-<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/14.jpg?raw=true", width= "200" alt=" " style="float: left;"/>
-
-Farid is an Actuary, he holds a PhD in Applied Statistics. He works as a Researcher at the Research Center in Applied Economics for Developement - CREAD in Algiers (Algeria). His research interest focusses on mortality & longevity modeling, ageing, and pensios sustainability. At Cread, he is leading the Population Studies Team and the Actuarial Demography Working Group. Besides, he is a member-expert at the national committee for population belonging to the Algerian health ministry.  
-
-</p>
-  
-<hr>   
-<h2 id="cv"> Curriculum Vitae </h2>
-
-<div align="center">
-
-<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/CV1.png?raw=true" class="zoomA"/>
-<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/CV2.png?raw=true" class="zoomA"/>
-<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/CV3.png?raw=true" class="zoomA"/>
-<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/CV4.png?raw=true" class="zoomA"/>
+<script>
+function copyEmail(e) {
+  e.preventDefault();
+  const email = "farid.flici@gmail.com";
+  navigator.clipboard.writeText(email).then(() => {
+    const msg = document.getElementById("copyMsg");
+    msg.style.display = "inline";
+    setTimeout(() => {
+      msg.style.display = "none";
+    }, 1500);
+  });
+}
+</script></div>
 
 </div>
-
-<div align="right">
-<button><a align="right" href="https://github.com/Farid-FLICI/farid-flici.github.io/raw/y/CV_Farid%20FLICI_31.05.2020.pdf"><b>Download CV (.pdf)</b></a> </button>
+<img src="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/picff2.png">
 </div>
+</header>
+
+<nav>
+<a href="./index.html">Home</a>
+<a href="./pub.html">Publications</a>
+<a href="./conf.html">Conferences</a>
+<a href="./tutorial.html">Tutorials</a>
+<a href="./tools.html">Tools</a>
+<a href="./data.html">Data</a>
+<a href="./media.html">Media</a>
+</nav>
+
+<main class="container">
+
+<section>
+  <h2>About</h2>
+  <p>
+  I am a Senior Research Fellow at CREAD (Algiers) and a Visiting Researcher at LSHTM (London), specializing in actuarial demography. My research focuses on the implications 
+    of demographic change for the financial sustainability of social protection systems, alongside work on migrant mortality and health in high-income countries. I integrate 
+    actuarial science, demography, and data science to address policy-relevant challenges. My work is published in international peer-reviewed journals, presented at leading 
+    conferences, and contributes to evidence-based policymaking.
+  </p>
+
+  <a href="./cv.html" class="btn">CV</a>
+  <a href="./pub.html" class="btn">Publications</a>
+  <a href="./tools" class="btn">Tools</a>
+  <a href="./media.html" class="btn">Media</a>
+</section>
+
+  <section class="alt-bg">
+  <h2>Additional Roles</h2>
+
+  <div class="roles">
+
+    <div class="role-card">
+      <h3>Accredited Actuary</h3>
+<p>As an actuary accredited by the Algerian Union of Insurance and Reinsurance Companies (UAR), I advise life insurance companies on pricing and reserving, 
+  applying actuarial methods to ensure financial soundness and regulatory compliance.</p>    </div>
+
+    <div class="role-card">
+      <h3>Policy Advisor</h3>
+    <p>I collaborate with key governmental institutions in Algeria, contributing to population policy (National Committee for Population), 
+      social security (Ministry of Labor), and social statistics (National Council of Statistics).</p>    </div>
+
+    <div class="role-card">
+      <h3>Consultant</h3>
+<p>I serve as a consultant for several UN agencies (UNESCWA, UNFPA, UNDP), working on population health, ageing, and social protection. My contributions 
+  focus on generating evidence through statistical analysis and demographic modelling.</p>    </div>
+
+    <div class="role-card">
+      <h3>Public Engagement</h3>
+<p>I play an active role in promoting actuarial science globally as a mentor in UNDP’s actuarial programmes (AFDP, GAIN), and in Algeria as Vice President of the Algerian 
+  Association of Actuaries (ALGAA) and advisor to the Algerian Association of Social Security.</p>    </div>
 
-
-<hr>
-
-<h2 id="pub"> Selected Publications </h2>
-
-<p> FLICI, Farid (2020). <a href="https://muse.jhu.edu/article/754032"  target="_blank">"Analyzing the Trend of Life Expectancy Evolution in Algeria from 1962 to 2018: The S-logistic Segmentation with Jumps."</a> <i> Population Review 59</i>(1): 56-72. DOI: 10.1353/prv.2020.0002 </p>
-
-<p>  FLICI, Farid and PLANCHET, Frédéric (2020). <a href="https://link.springer.com/chapter/10.1007/978-3-030-37912-4_13" target="_blank"> Financial Sustainability of the Algerian System: a perspective analysis of the 50 coming years</a>. In Peris-Ortiz, M.; Alvarez-Garcia, J.; Dominguèz-Fabian, I. and Devolder, P. (Eds), <a href="https://link.springer.com/book/10.1007/978-3-030-37912-4"> <i>"Economic Challenges of Pension Systems- A saistainability and International Management Perspective"</i></a>, Springer Nature, Switzerland. </p>
-
-<p id="2020">  FLICI, Farid (2020). <a href="https://www.soa.org/globalassets/assets/files/static-pages/research/arch/2020/arc-2020-iss-2-flici.pdf" target="_blank">"Closing-Out the Algerian Life Tables: for More Accuracy and Adequacy at Old-Age.</a>"  <i>Acturial Research Clearing House, 2020</i>(2), 2. </p>
-
-<p>  FLICI, Farid and PLANCHET, Frédéric (2019). <a href="https://www.mdpi.com/2227-9091/7/2/38" target="_blank"> “Experience Prospective Life-Tables for the Algerian Retirees”</a>,  <i>Risks, 7</i>(2), 38, doi:10.3390/risks7020038</p>
-
-<p>  FLICI, F. (2019). <a href="hhttp://www.colloquium2019.org.za/wp-content/uploads/2019/04/farid_flici.pdf" target="_blank">“On the redesign of Pay-As-You-Go retirement systems: Towards more generational and inter-generational equality”.</a>  <i>Presented at the Section Colloquia of the International Actuarial Association</i>, Cape-Town, South Africa (April).</p>
-
-<p>  CHINOUNE, M. and FLICI, F. (2019). <a href="http://uaps2019.popconf.org/uploads/190706" target="_blank">“Assessing the quality of national life tables in Algeria using specific survey”.</a> Conference paper.  <i>8th African Population Conference</i>, Entebbe, Uganda (November).</p>
-
-<p>  FLICI, Farid ; SENOUCI, Khadidja et HANNANI, Yasmine (2017). <a href="http://www.ressources-actuarielles.net/EXT/IA/sitebfa.nsf/e17f9d0572826b2ac12572ba0022fd23/ce9254385716d9dbc125831e006c8ef0?OpenDocument" target="_blank">“Tables de mortalité d'expérience incorporant une échelle de projection: adaptation au cas des retraites en Algérie”,</a> <i>Bulletin Français d’Actuariat, 17</i>(34) : 5-32.</p>
-
-<p>  FLICI, Farid (2016a). <a href="http://www.ressources-actuarielles.net/EXT/IA/sitebfa.nsf/0/B95BE75F24A33462C1258029003E61E8/$FILE/31_Article1.pdf?OpenElement" target="_blank">“Provisionnement des rentes viagères en Algérie entre approche statique et approche prospective”,</a> <i>Bulletin Français d’Actuariat, 16</i>(31) : 5-40.</p>
-
-<p id="2016b">  FLICI, Farid (2016b). <a href="https://www.researchgate.net/publication/299452393_Coherent_mortality_forecasting_for_the_Algerian_population" target="_blank"> "Coheerent Mortality forecasting for the Algerian Population"</a>, <i> Presented at Samos Conference in Actuarial Science and Finance ASF2016 </i>, Samos, Greece, May 2016. </p>
-
-<p id="2016c">  FLICI, Farid (2016c). <a href="https://mpra.ub.uni-muenchen.de/99077/1/MPRA_paper_99077.pdf" target="_blank"> "Forecasting the age-specific fertility rates of the Algerian population up to 2050"</a>, <i> MPRA Paper No. 99077</i>.</p>
-
-<p>  FLICI, Farid (2015). <a href="http://www.actuaries.org/oslo2015/papers/IAALS-Flici.pdf" target="_blank">"Mortality forecasting for the Algerian population with considering cohort effect”,</a>  <i>Proceeding of the International Association of Actuaries</i>. IAAC 2015. Oslo-Norway.</p>
-
-<p id="2014">  FLICI, Farid (2014). <a href="https://www.researchgate.net/profile/Farid_Flici/publication/272510401_Estimation_of_the_missing_data_in_the_algerian_mortality_surface_by_using_age-time-segmented_Lee_Carter_model/links/54e850e10cf25ba91c7c5d54/Estimation-of-the-missing-data-in-the-algerian-mortality-surface-by-using-age-time-segmented-Lee-Carter-model.pdf?origin=publication_detail" target="_blank"> "Estimation of the missing life tables in the Algerian mortality Surface (1977- 1999) by using the Lee-Carter formula”,</a> <i>Presented at SMTDA-2014</i>. June 2014, Lisbon. Portugal.</p>
-
-
-<hr>
-  
-<h2 id="tuto"> Tutorials </h2>
-
-<p> Farid FLICI (2020). Populations Projections Using R - Including Dynamic graphical Visualisations. A textbook published with Gitbook, Available at:[<a href= "https://farid-flici.gitbook.io/pop-proj-dz/"  target="_blank"> https://farid-flici.gitbook.io/pop-proj-dz/ </a>], Version of 2020-04-30.
-</p>
-
-<p style="text-align:center"> 
-<img src=" https://gblobscdn.gitbook.com/assets%2F-M69GC8Q928dOzF6PVLf%2F-M69GS2PFTmSdU0CSttr%2F-M69I-eAFwk1RSB2dyfo%2Fpyram.gif?alt=media&token=3e55109d-017e-40bd-9d0c-ba52ad6ff499", height="200"  />
-</p>
-
-<p>  Farid FLICI (2020). Muti-Scenarios Populations Projection for Algeria -  Using R . A textbook published with Gitbook, Available at: [<a href="https://app.gitbook.com/@faridflici/s/pop-proj-dz/multi-scenarios-population-projection-for-algeria-using-r" target="_blank"> https://app.gitbook.com/@faridflici/s/pop-proj-dz/multi-scenarios-population-projection-for-algeria-using-r </a>], Version of 2020-05-06. 
-</p>
-
-<p style="text-align:center"> 
-
-<img src=" https://gblobscdn.gitbook.com/assets%2F-M69GC8Q928dOzF6PVLf%2F-M6ehPf0zZk0lMLbp0Nv%2F-M6eoYDr6qrO93T2U7TH%2Fpyrampopdz.gif?alt=media&token=f04ac85b-3008-4f9c-bc6a-b7657cc400e4", height="200" class="center"/>
-</p>
-
-
-<hr>
-<h2 id="conf"> Organized Conferences & Training </h2>
-
-<p>  Starting in January 2016, I initiated a series of workshops known as <i>Journée d'Actuariat Vie Algérie - JAVA </i> which is dedicated to Life Insurance, Social Security, and Retirement in Algeria and in the world. Until the end of 2018, 7 editions have be organized with 15 talks and 10 speackers.</p> 
-
-<h3 style="font-size:110%; padding=5px"> JAVA-1, January 27<sup>th</sup> 2016 at CREAD </h3>
-
-<li> Les Tables de mortalité Comme outils de tarification et de provisionnement en assurance vie– Farid FLICI (CREAD) </li>
-<li> Construction Tables de mortalité d’expérience  pour une compagnie d’assurance – Moussa MEHIRECHE (Ministère des Finances) </li>
-<li> Tables de mortalité Adaptée à l’expérience de mortalité des retraité – Farid FLICI (CREAD) </li>
-
-<h3 style="font-size:110%"> JAVA-2, March 16<sup>th</sup> 2016 at Univ. Algiers II </h3>
-
-<li> Construction Tables de mortalité d’expérience  pour une compagnie d’assurance – Moussa MEHIRECHE (Ministère des Finances) </li>
-<li> Longevity and life annuities reserving in Algeria : comparison of mortality models – Farid FLICI (CREAD) </li>
-
-<h3 style="font-size:110%"> JAVA-3, December 7<sup>th</sup> 2016 at the Higher School of Statistics (ENSSEA, Kolea) </h3>
-
-<li> Santé / prévoyance collective et individuelle Garantie/règles de souscriptions/tarification - Hamza RABEHI(Institut des Actuaires FRANCE) </li>
-<li> Financial Sustainability of the Algerian Pension Plan - Farid FLICI (CREAD) </li>
-
-<h3 style="font-size:110%"> JAVA-4, May 25<sup>th</sup> 2017 at CREAD </h3>
-
-<li> On the heterogeneity of human population as reected by the mortality dynamics - Séverine ARNOLD (UNIL, Switzerland, Via Skype) </li>
-<li> Closing-out the Algerian Life tables: For more Accuracy and Adequacy at old ages - Farid FLICI (CREAD) </li>
-
-<h3 style="font-size:110%"> JAVA-5, November 26<sup>th</sup> 2017 at CREAD </h3>
-
-<li> Tables de mortalité en assurance vie en Afrique Subsaharienne  - Aymric Kamega (PDG d’ACAM-Vie, Cameroun, Via Skype) </li>
-<li> Tables de mortalité d’expérience incorporant une échelle de projection : l’expérience des retraités algériens - Khadidja SENOUCI (Doctorante, ENSSEA) </li>
-
-<h3 style="font-size:110%"> JAVA-6, June 27<sup>th</sup> 2018 at CREAD </h3>
-
-<li> A new inference strategy for general population mortality tables - Alexandre BOUMEZOUED (Milliman Paris, Via Skype) </li>
-<li> Mortality forecasting using a multi-functional Lee-Carter Model  : l’expérience des retraités algériens - Mohamed D. SADOUN (CREAD and USTHB) </li>
-
-<h3 style="font-size:110%"> JAVA-7, November 28<sup>th</sup> 2018 at CREAD </h3>
-
-<li>  The implications of mortality heterogeneity on longevity sharing retirement income products - Héloise L. HARDY (CEPAR-UNSW Sydney, via skype) </li>
-<li> l’estimation de l’Espérance de Vie sans Maladies Chroniques de la population Algérienne des Assurés Sociaux - Mohamed A. GHERNAOUT (ESSS and CNAS) </li>
-
-<hr>
-<h2 id="proj"> Research Projects </h2>
-
-<p> Actualy, we are working on a research project on "The Future of Longevity, Health, and Ageing in Algeria: Implications on Social Security and Life Insurance". The project has been launched in March 2020. Further details will be made available soon. </p>
-      
-<hr>
-<h2 id="data"> Demographic Data </h2>
-
-<h3> Mortality Data </h3>
-
-<p> Mortality data is available startting from 1977. Based on vital statistics, the Office of National Statistics (ONS) had published abbridged life tables for males, females, and both sexes population. Some years of the period 1977-1997 were missing, and some life tables were closed out before reaching the age of 80 years old. </p>
-
-<p>Later on, we have estimated missing data in the crude surface (Flici, <a href="#2014">2014</a>), and we have interpolated and extended the Age Specific Mortality years to older ages (Flici, 2016). The paper was revised and published in its final version as Flici (<a href="#2020">2020</a>).</p>
-
-<p style="text-decoration: underline;text-align:center"> <i> Mortality Surface, Algeria, 1977-2014 </i> </p>
-
-<div align="center"  style="margin-bottom:0px">
-
-<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/image019.gif?raw=true", height="260"  style="float: center;" />
-<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/image011.gif?raw=true", height="260" style="float: center;"  />
-
-</div>
-
-<p style="text-align:center; font-size:90%"> <i> Source: Annual publications of the Office for National Statistics ONS (Five-ages mortality rates) ; missing data has been estimated by Flici (<a href="#2014">2014</a>) , Single ages mortality rates interpolated and old age mortality rates have been extrapolated by Flici (<a href="#2020">2020</a> ).</i> </p>
-
-<p>The three type of data for males, females, and both sexes population can be accessed through the links below: </p>
-
-<p align="center">
-
-<table style="width:80%" align="center">
-  <tr style="text-align:center">
-    <th> --- </th>
-    <th>Males</th> 
-    <th>Females</th>
-    <th>Both Sexes</th>
-  </tr>
-
-  <tr>
-    <td style="text-align:left"><b>ONS data</b></td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Mortality_Rates_Males_nQx.txt" target="_blank">  crude_nQx_males.txt  </a> </button></td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Mortality_Rates_Females_nQx.txt" target="_blank"> crude_nQx_females.txt </a></button> </td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Mortality_Rates_Both_Sexes_nQx.txt" target="_blank"> crude_nQx_both_sexes.txt </a> </button></td>
-  </tr>
-  <tr>
-   <td  style="text-align:left"><b>ONS data being completed</b></td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/completed_Mortality_Rates_Males_nQx.txt" target="_blank"> completed_nQx_males.txt </a></button> </td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/completed_Mortality_Rates_Females_nQx.txt" target="_blank"> completed_nQx_females.txt </a></button> </td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/completed_Mortality_Rates_Both_sexes_nQx.txt" target="_blank"> completed_nQx_both_sexes.txt </a> </button></td>
-  </tr>
-  <tr>
-  <td  style="text-align:left"><b>ASMRS detailled mortality surface</b></td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Single_Age_Mortality_Rates_Males_qx.txt" target="_blank"> ASMRs_males.txt </a> </button></td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Single_Age_Mortality_Rates_Females_qx.txt" target="_blank"> ASMRs_females.txt </a> </button></td>
-    <td>  <button><a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/Single_Age_Mortality_Rates_Both_Sexes_qx.txt" target="_blank"> ASMRs_both_sexes.txt </a> </button></td>
-  </tr>
-</table>
-
-</p>
-
-
-<h3> Fertility Data </h3>
-
-<p> Fertility data in Algeria are mainly provided by the Office for National Statistics on the basis of the civil registration data. This principal source is completed by census data and specific surveys data. Our database was constituted by the five ages fertility rates published by the Office for National Statistics (ONS) over the periods [1964,1969], [1976,1991], [1994,2000] and [2008,2014]. In concern of population censuses, only the last three ones (1987, 1998 and 2008) gave the five ages fertility rates of the female population ages [15,49]. </p>
-
-<p> This data allowed us to constitute a discontinuous fertility surface in the sense that some years of the observation periods are still with no data. Missing data were estimated in Flici (<a href="#2016c">2016c</a>), and the Age Specific Fertility Rates ASFR’s have been interpolated by the same work. </p>
-
-<p style="text-decoration: underline;text-align:center"> <i> Fertility Surface, Algeria, 1964-2014 </i> </p>
-
-<div align="center"  style="margin-bottom:0px">
-
-<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/image012.gif?raw=true", height="260"  style="float: center;" />
-<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/image013.gif?raw=true", height="260" style="float: center;"  />
-
-</div>
-
-<p> The crude data, as it was first published by the ONS, by five ages, can be downloaded here: </p>
-<div align="center"><button> <a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/fxt_5.txt" target="_blank"><b>Five-Ages Fertility Rates, ONS: 1964-2014 (.txt)</b></a></button></div>
-
-<p> The surface of fertility rates by five ages, being completed, can be downloaded from the link: </p>
-<div align="center"><button> <a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/y/fxt_5.txt" target="_blank"><b>Five-ages Fertility Rates: 1964-2016, completed (.txt)</b></a></button> </div>
-
-<p> The Age-Specific Fertility Rates (ASFR) for the single ages from 15 to 49 years old .... can be downloaded from </p>
-
-<div align="center"><button>  <a href="https://raw.githubusercontent.com/Farid-FLICI/farid-flici.github.io/290ec31ab931a18a693b17a03752f34e99683ec7/fxt.txt?raw=true" target="_blank"><b>Age Specific Fertility Rates (.txt)</b></a> </button> </div>
-
-
-
-<h3> Population Projections </h3>
-
-<p> Our population projections are achieved using the Cohort-Component Method. The Age-Specific Mortality Rates (ASMRs) were projected using the coherent model of Hyndman et al. <a href="https://link.springer.com/article/10.1007/s13524-012-0145-5" target="_blank"> (2013)</a>. The detailed methodology is explained in Flici (<a href=#2016b>2016b</a>). </p>
-
-<p> The projected Mortality Rates for Males and Females can be downloaded from:</p>
-
-<p style="font-size=110%; text-align:center"><b>
-<table style="width:40%" align="center">
-  <tr style="text-align:center">
-  <td> <button> <a href="https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-M69GC8Q928dOzF6PVLf%2F-M69J6T3gp8XoKgj42Q6%2F-M69J_65GSqJfyB1hQZ4%2FMort_forecast_males.txt?alt=media&token=ce303331-93ca-40ce-b2a3-fb50dfcc0bea" target="_blank"><b>Qxt_proj_Males.txt</b></a></button> </td>
-  <td> <button> <a href= "  https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-M69GC8Q928dOzF6PVLf%2F-M69J6T3gp8XoKgj42Q6%2F-M69JamiW2fVfbZC0gia%2FMort_forecast_females.txt?alt=media&token=8454d5f6-3270-45a0-826c-09de6bfe750d"   target="_blank"><b>Qxt_proj_Females.txt</b></a></button> </td>
-  </tr>
-</table>
-</b></p>
-
-<p> Fertility Rates were projected using the Lee-Carter model adapted for fertility (Lee, <a href="https://www.sciencedirect.com/science/article/abs/pii/0169207093900047" target="_blank">1993</a>). The application of the model on the Algerian case is detailed in Flici (<a href="#2016c">2016c) </a>.The projected rates can be downloaded from: </p> 
-
-<p style="font-size=110%; text-align:center"> <button> 
-<a align="center" href="https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-M69GC8Q928dOzF6PVLf%2F-M69J6T3gp8XoKgj42Q6%2F-M69JcVOtWsH-GQUmIiu%2FFert_forecast.txt?alt=media&token=cc90ae5b-dcae-49d9-86e6-b9244fd4549d" target="_blank"><b>fxt_proj.txt</b></a></button> </td>
-</b></p> 
-
-<p style="text-decoration: underline;text-align:center"> <i> Population projection, Algeria, 2018-2070 </i> </p>
-
-<div align="center"  style="margin-bottom:0px">
-<img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/image021.gif?raw=true", height="450"  style="float: center;" />
-</div>
-
-<p>The projected populations of males and females can be downloaded from: </p>
-
-<p style="font-size=110%; text-align:center"><b>
-<table style="width:40%" align="center">
-  <tr style="text-align:center">
-  <td> <button> <a href="https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-M69GC8Q928dOzF6PVLf%2F-M8zt2KKG3V5lXz92Ee2%2F-M8ztpo9OY7lBcum105o%2FPopulation_projection_5_age_males.txt?alt=media&token=c0dec4a9-d3c3-40cd-898d-c2640c1b5dc1" target="_blank"><b>pop_proj_Males.txt</b></a></button> </td>
-  <td> <button> <a href= "  https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-M69GC8Q928dOzF6PVLf%2F-M8zsguGig4Ec12f0CwT%2F-M8zsrxEMAIxVHZl717C%2FPopulation_projection_5_age_females.txt?alt=media&token=31666971-935e-4da7-8599-e7d9ea9e91a7"   target="_blank"><b>pop_proj_Females.txt</b></a></button> </td>
-  </tr>
-</table>
-</b></p>
-
-
-
-<hr>
- <h2 id="yout"> Youtube </h2>
-
-  <div align="center">
-      <iframe                width="533" height="300" src="https://www.youtube.com/embed/6-HSN8tTUmU"                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <iframe                width="533" height="300" src="https://www.youtube.com/embed/t2N0H3WTG1E"                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <iframe                width="533" height="300" src="https://www.youtube.com/embed/UHgdGVgtxLk"                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <iframe                width="533" height="300" src="https://www.youtube.com/embed/WwrIZq4GkEQ"                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
+</section>
+  <h2>Research</h2>
+ <p>
+<p>I study demographic dynamics—mortality, morbidity, and ageing—and their impact on the sustainability of social security systems in Algeria. My work also examines 
+  mortality and health inequalities between migrants and natives in high-income countries.</p>
 
+  <a href="./pub" class="btn">Publications</a>
+  <a href="./conf" class="btn">Conferences</a>
+  <a href="./tools" class="btn">Tools</a>
+  <a href="./media" class="btn">Media</a>
 
-<hr>
-<h2 id="med"> Media </h2>
-
-<p>
-<li style="font-size:110%;"> <a href="https://www.developmentaid.org/#!/news-stream/post/59628/experts-opinions-world-population-ageing-consequences-and-solutions" target="_blank">"World Population Ageing: consequences and solutions"</a>, in Experts' Opinion of DevelopmentAid, March 23, 2020. </li>
-<li style="font-size:110%;"> <a href="https://www.soa.org/globalassets/assets/library/newsletters/international-section-news/2019/may/isn-2019-iss-77.pdf" target="_blank">"Training on Data Science for Life & Health Insurance, CREAD, December 2018 in collaboration with AWB"</a>, SOA International newsletter, n 77, May 2019, Society of Actuaries, NY (USA). </li>
-<li style="font-size:110%;"> <a href="https://blog.actexmadriver.com/actuaries-around-the-world-algeria?fbclid=IwAR1_qe0Fh85nP3TWnfTUePi6yi9JXHyijIKiWWF5qMu02Mb-7tUHfOIOBkk" target="_blank">Interview </a> for Actex Learning newsletter – Actuaries around the world, May 2019, NY (USA). </li>
-
-<li style="font-size:110%;">Le Courier d’Algérie, Juillet 2018, <a href="http://lecourrier-dalgerie.com/farid-flici-dr-en-statistique-et-me-de-recherche-au-cread-analyse-pour-le-courrier-dalgerie-la-demographie-en-algerie-les-etudes-de-la-population-sont-primordiales/" target="_blank"> "Les études de la population sont primordiales dans l'élaboration des politiques publiques"</a> </li>
-
-<li style="font-size:110%;"> Canal Algérie, Juillet 2018, <a href="https://www.youtube.com/watch?v=UHgdGVgtxLk" target="_blank"> "Vieillissement de la population Algérienne."</a> </li>
-
-<li style="font-size:110%;"> Le reporter, Juillet 2016, <a href="http://www.cread.dz/wp-content/uploads/2017/10/REPORTERS.pdf" target="_blank">"Faire face au vieillissement de la population et ses implications socio-économiques." </a> </li>
-
-</p>
-
-
-
-<hr>
-<h2  id="acad"> Academic Platforms </h2>
-       
-       <div align="center">  
-  <a href="https://orcid.org/0000-0002-1954-2120"  target="_blank"><img height="40" src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" /> </a>
-  <a> |  </a>
-  <a href="https://www.scopus.com/authid/detail.uri?authorId=57209236573" target="_blank"><img height="40" src="https://www.euroturbo.eu/wp-content/uploads/2019/09/logo-scopus-400x400px-arancio-light.jpg" /> </a>
-  <a> |  </a>
-  <a href="https://publons.com/researcher/3172040/flici-farid/" target="_blank"><img height="40" src="https://pbs.twimg.com/profile_images/540712414933573633/98iVtVLV_400x400.png" /> </a>
-  <a> |  </a>
-  <a href="https://scholar.google.fr/citations?user=czeu-dwAAAAJ&hl=en" target="_blank"><img height="40" src="https://scholar.google.com/intl/ar/scholar/images/1x/scholar_logo_64dp.png" /> </a>
-  <a> |  </a>
-  <a href="https://www.researchgate.net/profile/Farid_Flici" target="_blank"><img height="40" src="https://blog.u-bourgogne.fr/cost-nutredox/wp-content/uploads/sites/81/2019/03/ResearchGate-logo.png" /> </a>
-  
-  </div>
-
-       
-       
-       
-<hr>
-<h2 id="soc"> Social Media</h2>
-
-<div align="center">  
-  <a href="https://www.facebook.com/flicifarid"  target="_blank"><img width="40" src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png" /> </a>
-  <a> |  </a>
-  <a href="https://twitter.com/Farid_FLICI" target="_blank"><img width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEUdofL///8mpPI9rfMAnPEAm/EVn/IAnvLw+P4AmfH2/P7i8v37/v/H5fvo9P2Vzffb7/zV7PyCxfbC4/sxqPNyvvVbtvRPsfR2wfar1/lpuPW33fp/xPbX7Pxvu/XG5Pud0fiw2vmQyvfQ5vsAlfFStvSk0/ih7pXNAAAGSUlEQVR4nO2cC3OqOhCAeWwSFHyCUI8tvu71///Eq9Raa0VIdlO75+4358y0My3mK2F38yKoor+bIoiDvxodBbF+diP8Iob8EUP+iCF/xJA/YsgfMeSPGPJHDPkjhvwRQ/6IIX/EkD9iyB8x5I8Y8kcM+SOG/BFD/oghf8SQP2LIHzHkjxjyRwz5I4b8EUP+iCF/xJA/YsgfMeSPGPJHDPkjhvz5NYb6/J+cX2GoQUFUFEWgwJC35vmGWsFish8nw+EwGee7UgHt9Z9taKDMs/CaZBvD9yZpiCK3T3iuoTZ1Gn5nVKmbn4NgMnP8DApD5wtAtb/jd2Ibmavrm2A3DieOvZfAUJeV0yX0YNfid+qr5VlIGxVtkjDMHDsphaFJE6dP16t2wSNzOHYOY4KXdfPtRnVf8S54Q7MIw6np/rlvjB4KnpyieLcfnu+pyyc04A3V7BQbrPOY6RIMwzT5/Lp+omHRtGB1J8I/Qj3uords3ZMk2tDM39uQWynC3Epwpt0biTZUefihaPFbRfbQ6Ia0iWTHpOES0dCG+vKwjPonRuh+CK8YR7pJGvPcpalow2J4ack06hkOdGkjODuWdqBfjn3FqalYQ11dtWVY9eupTfjtSTZRRbVsfuHFKdygDb/ejnmfvPzlr9LFap2ee8nSLZ6iDf98bdC2R0iFg4Xhhb3j0JHaMBzHnX9qM7yr8JipazOJe+mJSVfysumkH6SuhTc+lt5p7rRSj65p7LL9u2Dh3ErKbPHJNnjwOIJdwdb8zaIn1jQmudek4SRofRyNRa54xynTf4A2bLsj451ucTRvloKHh52+C/w9fG1r2Hhi7jqae1Mz7QwXuMk3fF0atTcuO8TwvZCzNFwNUO2jGAE/rKJHr9GtpJlaGVqNWe6AN+wqo5O3ulDXoRXsIs3IdYKGzLDHPcneNvXgMmNvN3T6DYY9x0LT1a4qIq1gsLEyfH4vtUrh2XS/3mytDFe/wDCI7mZ9IhwHTbSGxqWW7svm2YbNb8PCn+HOeaaUxlAvmoGE5eygDfMnG8ImzOsBGOXtLtbIpwhr2Az2klVd6NiuGOtNgRPE99L6oyXTtRfBDJnwaWcTfTB9umHkMq1kAbakIVi3sBspWINNhwRj/IlfQ7cVdErDIPYqmKE3ShGtAXvjDZnvqdbx/YF+DCkqb/AZa0r0uIBijH+7dEFIgpgKpjO03XVgQ47N91T72sa+DF/QgYbG0FvpNiTYVEtzD6Hubq0LBJ2UavclvHgxxEdSuv2lUHqowBOCW0i3g9YUtktK3bhuKf0C4R5hmFttdOomww7vGyh3QUO0JO2q6KFhA+k+bw3Rrm1fswPogVMDmWERDJRSg38G/26JBNc0xxLIDI9JPx2NKOfbaG4hnSH5MHFNkSoCymxBPUwkCaQBZaQB2hlh7JLTBTpD2mGi2wGHe1Bm/Ly74b15JTvfRZkPCRdKZ3QH2CgNDd3EIlWYCYhrGrKFUro+Sn06D1q3gFlBU5CeIT5/SDLYp4ujJ6hPWEKBT4sVfvrpCvIzpFofkMPEOe1BYPpTshoKVGJcEtWjH3g5BwzRxnkGlWjM9Imnk86g4td8nCTWHRa/1nSLv7PcBpSynrlJ6dvh8bS6sS9UU/xCzDe8GWqoraelMIcOWvFlCLF9QJ35EPRkqIqlfVLMyYNMgwdDrSIHv3BjeVa6L9SGGoLSbh/3O9mCONFfIDU0AH8OTrl+2n2mzxWc4ekc3umf1sfsZ4p57ljKLP28XqgBZVjWVREFUVGV9W6ZOhfc49LTI9iAMsSV2JcbqP0E0TO4Xqoq9F6a/b03ClGCjDQtLwnqTVp79qM4nacWzo5prbx20AaKPVFQO22AHv2EH9V+GlUdLGeDk0PlvX++Q5TxNegy7z2WyPI/+of8KGsarVR96B7UZ+NDDT+mF5Cv40Nc52+thU36tq3jH9ULfMwmggnixWSZ7686bbpebXZlfAxKP2t3wsf4UB9NjkV4c/739C5AffrGwzsf++H3rYK6wd/1+/DsN0P6Rwz5I4b8EUP+iCF/xJA/YsgfMeSPGPJHDPkjhvwRQ/6IIX/EkD9iyB8x5I8Y8kcM+SOG/BFD/oghf8SQP2LIHzHkjxjyRwz5I4b8EUP+iCF/xJA//wPD/wC0aEvUg4TE1wAAAABJRU5ErkJggg==" /> </a>
-  <a> |  </a>
-  <a href="https://www.linkedin.com/in/farid-flici-659a7625/" target="_blank"><img width="40" src="data:image/png;base64,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" /> </a>
+  <section class="alt-bg">
+  <div class="research-block">
+    
+    <div class="research-text">
+      <h2>Migrant Mortality & Health </h2>
+      <p>
+        My recent research examines mortality and health inequalities between migrants and native populations in high-income countries. 
+        I analyse how country of origin shapes mortality advantages and how these patterns evolve over time.
+      </p>
+      <p> This work relies on large-scale administrative data (registered deaths and population censuses) and contributes to ongoing debates on migrant 
+        health and demographic change in Europe and the UK. </p>
+    <p>Our analysis of Spain shows that migrants from low- and middle-income countries tend to have a mortality advantage over native populations, whereas 
+      those from countries with comparable income levels often display a no-advantage or even a disadvantage. See the full paper for a detailed discussion 
+      of the migrant mortality paradox.</p>
+      <a href="https://link.springer.com/article/10.1186/s41118-025-00264-1" class="btn">Read the Paper</a>
     </div>
-  
-  <p style="text-align:right"> Last update: 2020-06-04. </p>
 
+    <div class="research-plot">
+      <img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/Figure6.png?raw=true" , height="300"  style="float: right;"/>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="research-block reverse">
+    
+    <div class="research-plot">
+      <img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/image021.gif?raw=true", height="300"  style="float: left;"/>
+    </div>
+
+    <div class="research-text">
+      <h2>Population Ageing & Pension Sustainability</h2>
+     <p>
+Our research shows that ongoing population ageing in Algeria will further widen the deficit of the retirement system in the coming decades. The ratio of working-age to retirement-age individuals fell below 6 in 2022 for the first time in Algeria’s history and is projected to reach 2.7 by 2047 
+[<a href="https://link.springer.com/chapter/10.1007/978-3-030-37912-4_13" target="_blank">read more...</a>].
+</p>
+<p>
+This demographic shift limits the effectiveness of parametric reforms, which alone are unlikely to restore financial balance 
+[<a href="https://onlinelibrary.wiley.com/doi/10.1111/issr.12335" target="_blank">read more ...</a>]. 
+</p>
+<p>
+Alternative reform options have been proposed to maintain the deficit at manageable levels, including leveraging the system’s profitability 
+[<a href="http://www.rsp.hr/ojs2/index.php/rsp/article/viewFile/1822/1561" target="_blank">read more...</a>] and introducing a contribution cap to better target public subsidies toward lower-income groups 
+[<a href="https://www.mdpi.com/2227-9091/12/6/96" target="_blank">read more...</a>]. 
+</p>
+<p>To support policy analysis, we developed web applications: the <a href="https://farid-flici.github.io/rss.html" target="_blank">Retirement Sustainability Simulator</a>, 
+  allowing users to assess the impact of different reform scenarios on the system’s long-term sustainability, and the 
+  <a href="https://farid-flici.github.io/pss.html" target="_blank">Population Projection Simulator</a>, allowing to visualise poulation change using customised scenarios of
+mortality and fertility</p>
+<p>
+We produced R tutorials that can be used by students, researchers, and policymakers to produce poulation projections
+  [<a href="https://farid-flici.gitbook.io/pop-proj-dz/" target="_blank">Tutorial 1</a>, <a href="https://farid-flici.gitbook.io/multi-scenarios-population-projection-for-algeria-/" target="_blank">Tutorial 2</a>] and designed
+  a web application to collect expert opinions and produce expert-based population rojections [<a href="https://faridflici.shinyapps.io/eppdz/" target="_blank">
+    Expert Survey Tool</a>].
+</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="alt-bg">
+  <div class="research-block">
+    
+    <div class="research-text">
+      <h2>Health Expectancy</h2>
+      <p>
+Overall, your findings highlight that people are living longer but spending more years in poor health, with important implications for healthcare demand, labour force 
+  participation, and the sustainability of social protection systems [<a href="https://applications.emro.who.int/EMHJ/V28/12/1020-3397-2022-2812-872-878-eng.pdf?ua=1" target="_blank">read more...</a>].
+        </p><p> 
+Your research shows that gains in life expectancy in Algeria have not been matched by improvements in healthy life expectancy. Between 2006 and 2019, older adults 
+experienced increases in total life expectancy, but a decline in years lived free of chronic disease, indicating an expansion of morbidity 
+ [<a href="https://www.populationmedicine.eu/pdf-196709-117648?filename=Algerian-elders-are-livin.pdf" target="_blank">read more...</a>].
+      </p><p> 
+Chronic conditions—particularly hypertension and diabetes—account for a large share of healthy life years lost, with growing contributions over time . 
+These patterns are consistent with broader trends observed in the MENA region, where improvements in longevity are accompanied by persistent or widening gaps in health status.
+[<a href="https://journals.sagepub.com/doi/10.1177/17423953241264875" target="_blank">read more...</a>]
+      </p>
+
+      <a href="#" class="btn">Read More</a>
+    </div>
+
+    <div class="research-plot">
+      <img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/Figure21.jpg?raw=true" , height="300"  style="float: right;"/>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="research-block reverse">
+    
+    <div class="research-plot">
+      <img src="https://github.com/Farid-FLICI/farid-flici.github.io/blob/y/Rplot21.png?raw=true" , height="260"  style="float: left;"/>
+    </div>
+
+    <div class="research-text">
+      <h2>Mortality Evolution in Algeria</h2>
+      <p> My research provides a comprehensive analysis of mortality trends in Algeria, combining historical reconstruction, data quality assessment, inequality analysis, 
+         methodological advances, and forecasting. </p>
+      <p> From a historical perspective, I show that mortality has improved substantially since independence, but with significant disruptions. In particular, the violence 
+        of the 1990s resulted in a loss of nearly two years of life expectancy. I also demonstrate that part of the observed fluctuations in mortality trends is driven by 
+        methodological changes and improvements in data collection [<a href="https://muse.jhu.edu/article/754032" target="_blank">read the paper</a>].</p>
+     <p>A key component of my work focuses on assessing and improving the quality of mortality data. Using mortality surfaces, I identify inconsistencies and structural 
+       breaks in the data—especially during the late 1970s and early 1980s—and document substantial improvements following the 1983 period and the 1998 census 
+[<a href="https://www.austriaca.at/0xc1aa5576_0x003cb6e7.pdf" target="_blank">read the paper</a>].</p>
+     <p> Methodologically, I contribute to the estimation of old-age mortality [<a href="https://www.soa.org/globalassets/assets/files/static-pages/research/arch/2020/arc-2020-iss-2-flici.pdf" target="_blank">read more ...</a>]
+       and the reconstruction of missing data in the historical surface of age-specific mortality rates 
+       [<a href="https://www.researchgate.net/publication/272510401_Estimation_of_the_missing_data_in_the_algerian_mortality_surface_by_using_age-time-segmented_Lee_Carter_model" target="_blank">read more ...</a>]
+     . I also develop coherent mortality forecasting models to project future mortality trends and support population projections and actuarial applications 
+[<a href="https://www.erudit.org/en/journals/agr/2021-v87-n3-4-agr05910/1076125ar.pdf" target="_blank">read more ...</a>]. </p>
+     <p> 
+ My works involve also analysing retirees mortality and designing forecasting models to expect future evolution in limited data contexts 
+       [<a href="https://www.mdpi.com/2227-9091/7/2/38" target="_blank">read more ...</a>].
+       </p>
+<p> In addition, I contribute to the production and validation of mortality indicators using alternative data sources, such as survey data, 
+  to assess consistency with official statistics 
+(<a href="https://www.researchgate.net/publication/375182260_Analyse_de_la_Mortalite_en_Algerie_a_Travers_l%27Enquete_MICS_VI" target="_blank">download report</a>). </p>
+<p> I also contributed with an R package allowing for interpolating age-specific mortality rates accross all ages from an abridged life table. The package 
+  <a href="https://cran.r-project.org/web/packages/Q2q/index.html" target="_blank">Q2q</a> is available
+on CRAN (the official R repository), and a <a href="https://openresearchsoftware.metajnl.com/articles/10.5334/jors.484" target="_blank">paper</a> presenting the package, its features, and practical cases using data from Algeria and Japan, was published in
+the Journal of Open Research Software</p>
+<p> Overall, this work provides a consistent and data-driven understanding of mortality dynamics in Algeria, while offering improved datasets and tools for researchers and 
+  policymakers.</p>
+
+      <a href="./data.html" class="btn">Datasets</a>
+    </div>
+
+  </div>
+</section>
+
+  <section id="featured">
+<h2>Featured Work</h2>
+<div class="grid">
+
+<div class="card">
+<h3> Journal Papers</h3>
+<p>📄Flici et al. (2025). <a href="https://link.springer.com/article/10.1186/s41118-025-00264-1" target="_blank">Migrant Mortality Advantage in Spain</a>, Genus</p>
+<p>📄Flici et al. (2024). <a href="https://www.mdpi.com/2227-9091/12/6/96" target="_blank">Contribution cap as a Pension reform option</a>, Risks</p>
+<p>📄Flici et al. (2022). <a href="https://applications.emro.who.int/EMHJ/V28/12/1020-3397-2022-2812-872-878-eng.pdf?ua=1" target="_blank">Chrnic disease-free life expectancy in Algeria</a>, EMHJ</p>
+<p>📄Flici (2020). <a href="https://muse.jhu.edu/article/754032" target="_blank">Life expectancy evolution in Algeria</a>, pop review</p>
+  <a href="./pub.html" class="btn">Go to Publications</a>
+</div>
+
+<div class="card">
+<h3>Tools </h3>
+<p>⚙️ <a href="https://cran.r-project.org/web/packages/Q2q/index.html" target="_blank">R package Q2q</a>: Interpolation of mortality rates across all ages</p>
+<p>📊 <a href="https://farid-flici.github.io/rss.html" target="_blank">Retirement Sustainability Simulator</a></p>
+<p>📊 <a href="https://farid-flici.github.io/pps.html" target="_blank">Population Projection Simulator</a></p>
+<p>📊 <a href="https://faridflici.shinyapps.io/eppdz/" target="_blank">Expert Opinion Survey Tool</a></p>
+  <a href="./tool.html" class="btn">Go to Tools</a>
+</div>
+
+<div class="card">
+<h3> Conference Talks</h3>
+<p><i class="fas fa-microphone"></i> <a href="https://youtu.be/owPmQyz1VQA?si=gC2JNjoJYprxXufS" target="_blank">Eurasian Actuarial Conference</a>, <strong>2025</strong></p>
+<p><i class="fas fa-microphone"></i> <a href="https://youtu.be/Rj79u1yuHx4?si=KWdhdUkh04lHy4_8&t=8" target="_blank">Arab Actuarial Conference</a>, <strong>2024</strong></p>
+<p><i class="fas fa-microphone"></i> <a href="https://www.youtube.com/watch?v=_OqpQKI2HPg&t=941s" target="_blank">Conference on Social Security (in Arabic)</a>, <strong>2022</strong></p>
+<p><i class="fas fa-microphone"></i> <a href="https://www.youtube.com/watch?v=FuMxetxeV-U&t=820s" target="_blank">Conference on pension sustainability</a>, <strong>2021</strong></p>
+<p><i class="fas fa-microphone"></i> <a href="https://youtu.be/t2N0H3WTG1E?si=OQnEHsr8DHABRuBo" target="_blank">IAA Section Colloquia</a>, <strong>2019</strong></p>
+<p><i class="fas fa-microphone"></i> <a href="https://youtu.be/6-HSN8tTUmU?si=CRK6gGM14W4nN57L" target="_blank">International Actuarial Congress</a>, <strong>2018</strong></p>
+
+  <a href="https://www.youtube.com/@faridflici9337" class="btn">Go to my YouTube Channel</a>
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Farid Flici.</p>
+</footer>
 
 </body>
 </html>
-
